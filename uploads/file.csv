@@ -1,0 +1,2 @@
+id,supplier_id,product_name_english,product_name_arabic,product_description_english,product_description_arabic,product_measuring_unit_english,product_measuring_unit_arabic,bar_code,sku,images
+,191,test prabh,test mohit (A),DESC ENG,"<span style=""""line-height: 18.5714px;"""">DESC ARA</span>",MU Eng,MU Ar,0,SKU test,http://royo-s3.s3.amazonaws.com/daisy_pollen_flower_220533Y4xime.jpg

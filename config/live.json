@@ -1,0 +1,337 @@
+{
+  "server":{
+    "debug_level":"debug",
+    "ip":"api.royoapps.com",
+    "protocol":"https://",
+    "xmlPath":"/var/www/html/royo/sitemap",
+    "uploadFolder":"clikat-buckettest",
+    "publicFolder":"/public/clikat-buckettest/",
+    "redis":{
+      "host":"localhost",
+      "pwd":""
+    },
+    "fixedUpto":4,
+    "shipping":{
+      "api_key_name":"api_key",
+      "api_secret_key_name":"api_secret"
+    },
+    "dhl":{
+      "dhl_site_key":"dhl_site_key",
+      "dhl_password":"dhl_password",
+      "dhl_account_number":"dhl_account_number",
+      "base_url":"http://xmlpitest-ea.dhl.com/XMLShippingServlet"
+    },
+    "ship_rocket":{
+      "shiprocket_email":"shiprocket_email",
+      "shiprocket_password":"shiprocket_password"
+    },
+    "rides":{
+      "api_link":"https://apidev-royodelivery.royoapps.com",
+      "registeration":"/user/addPersonalDetail",
+      "updateToken":"/user/updateToken"
+    },
+    "dialog":{
+      "project_id":"dialogagent-gtdkbi",
+      "apis":{
+        "url":"https://content-dialogflow.googleapis.com/v2/projects/",
+        "entity_types":"agent/entityTypes/",
+        "entities_batch_update":"entities:batchUpdate",
+         "intent_agent":"agent/intents/",
+        "update_entity_alt":"json"  
+       },
+      "product_entities_key":"457e0e5d-2a74-40eb-a37e-ebcc41c99edd",
+      "intent_id":"99d4cd67-c5e1-46bb-ac0b-880cb41ef169",
+      "supplier_entities_key":"98f1f1bf-a414-4e6e-a0a6-a7ae1cf9b4b9",
+      "client_email": "dialogflow-fvioob@dialogagent-gtdkbi.iam.gserviceaccount.com",
+      "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCrX+XzzXHxLY78\naYq6pqSNTsHdFTK+uQZIRcjp50geBt1KzD3taJwYqxr4JZoF2Lwaie8pJS+3gTa6\n84ZhV2z6O1DeZxCdwSqhRt8t/mRJsN2nwOnfqWgiNMG4CkFVhBd4a2ZO2uB99xIB\nDkIiEjuQcLkbGFbCMpa1sIoYGGO6+uGY/Yg9+yKPry9L6MBjlE7Q7wpESNu7OniA\nE/LqY75D6LahmMnBD6Q2gyvfvGL4MklLT8bTCzKhYI9bX+PGfD3scEtgq8pM485n\nYZPn4t2XpDG6G8p9StGjcacQxAX+dQPhO1ddbDH3B1Npn9SbpNaOrhwtgGI/vEiw\nR0M0iNJDAgMBAAECggEAN75mWJLzpK0ajQ0xlHwfG13KXoUGMBaULg8RBtB121qF\nQc7EuAQmfjmt+JiWjJ9OtF04n4wahNixekc7Z09eQdjoeadRtta97J7Weqn8aiHv\nP6FXEasTlcjOWHRxgwUH82IP8cdtbVvgDdra9SU0Hcwk0eTtV5bIAgqOKL9KNWfb\nItfPnL+b3MVNI12v2YBL7ooe/SnRj6IQHoQgil9wqyVesJnLEI3PPiZDrH9CBPt/\nv4GfG8fJ4H9vizuucchdGYViVnNsuAkkwT/SlNoDbdPZquB3bnXX7eSvrVgU5mm+\n4a3a9A14ZasqIXZrKxPtLuMfsHPLQMnD/ixaKsfeUQKBgQDyTG3+9xb4ZlCFnnMr\n/SurDKgLycqDTiGyC+b3aJNeHyOvjwiMO0loMnTN+Xrcjsi+jEf4cgJ4y2fHiIWT\n/ay0J0o+yPwsO98sN/8/zgoZxtDeWBxqkxM/TkV9XM/EOmziniCBy6BFgKKD54cw\nkcrcsi5oyUf1VXZDjx5+aZxv8wKBgQC1EMHGq/lAQmscc2RtqbwmhxjnTEFqXjjl\nYb69bVCi4dNTgnTpfGvBdyMvtcPJGCjlLeRwRDCeHaY070HVFXKoGZn8JG1kawzy\nO1aJrTgO6lXHUfO46fGOEpyZ/GUQ0UadYZMYjmxJCZqz9tceWvViG1+yMhhs3C/U\nh7qvV9j4cQKBgQClJo864DRZ73MnAE9ERnYDSscn8c0FHrY843v0WuVHnDX4raeH\n3ck1Kl8PHeMufmw55OgRYbRpnUsJZ/aUXq3exYEHtnqbs9t0Cl8CoG+mDivDwY7s\n3X6bAcC/qAk9mQ0qkdlaXu7JMNqUybUN1/HL5+9WIQvZHv1TIzQHufiVHQKBgBsb\nFhc62YaAKu7Ia4lrNoqCAP1nUgetcVENj/NlsQOhUPSYfA4UHUGKJ09WI6gwILcm\nZqNT4f9Zqu8TvkQ7AL4fjwjLH0FAMWD19x+HOfQpqou7PgQ5qXq+WIlI2oxo9+xJ\nli6/64AHmwxD8LJPpZp5RJs1mqh5UgO8CfuD6CxRAoGAD5C9sDYXt0S1b1s62kY4\nbayf0sxVmoP+PgyQvcx1A0p8mUzVkWNSoKBK6zQ8SA6oLc+FzSN2QMMKnMla78um\nBKwqNMl2gB6SjuMrJWmwEfoKwXtsRLbRU7/csE16k8RQFH4GqDZUPEoUFKmhW7qB\nBNYO9PNLA0RxxmYADuEYkNA=\n-----END PRIVATE KEY-----\n"      
+    },
+    "fcm_server_key":"AIzaSyAx5rwHLcoRK_S_ZnV9qdiLe1IQkkemNew"
+  },
+  "service":{
+    "ecomerce":2,
+    "food":1,
+    "home":8,
+    "common":0
+  },
+  "twilio": {
+    "s_id": "account_sid",
+    "auth_key": "auth_token",
+    "number_key": "from_number"
+  },
+  "muthoFun": {
+    "username": "muthofun_username",
+    "password": "muthofun_password"
+  },
+  "app_type": {
+    "ecomerce":2,
+    "food":1,
+    "home":8
+  },
+  "error_msg":{
+    "payment":{
+      "no_gate_way":0,
+      "error":1
+    }
+  },
+  "success": {
+    "notification": {
+        "enable":2,
+        "disable": 3
+    }
+  },
+  "algorithem": {
+    "delivery_charge_key": "delivery_charge_algorithem"
+  },
+  "payment":{
+    "strip":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "secret_key":"stripe_secret_key",
+      "publish_key":"stripe_publish_key",
+      "unique_id":"stripe"
+    },
+    "mumybene":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "mumybene_username":"mumybene_username",
+      "mumybene_password":"mumybene_password",
+      "unique_id":"mumybene"
+    },
+    "converge":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "merchantID":"converge_merchantID",
+      "merchantUserID":"converge_merchantUserID",
+      "merchantPIN":"converge_merchantPIN",
+      "unique_id":"converge"
+    },
+    "payhere":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "merchantID":"payhere_merchantID",
+      "unique_id":"payhere"
+    },
+    "myfatoorah":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "secret_key":"myfatoorah_secret_key",
+      "publish_key":"stripe_publish_key",
+      "unique_id":"myfatoorah"
+    },
+    "conekta":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "secret_key":"conekta_api_key",
+      "publish_key":"conekta_public_key",
+      "unique_id":"conekta"
+    },
+    "razorpay":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "secret_key":"razorpay_key_secret",
+      "publish_key":"razorpay_key_id",
+      "unique_id": "razorpay"
+    },
+    "paystack":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "secret_key":"paystack_secret_key",
+      "publish_key":"paystack_publish_key",
+      "unique_id": "paystack"
+    },
+    "paypal":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "secret_key":"paypal_secret_key",
+      "client_key":"paypal_client_key",
+      "unique_id": "paypal"
+    },
+    "venmo":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "merchant_id":"venmo_braintree_merchant_id",
+      "public_key":"venmo_braintree_public_key",
+      "private_key": "venmo_braintree_private_key",
+      "unique_id": "venmo"
+    },
+    "braintree":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "merchant_id":"venmo_braintree_merchant_id",
+      "public_key":"venmo_braintree_public_key",
+      "private_key": "venmo_braintree_private_key",
+      "unique_id": "braintree"
+    },
+    "squareup":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "square_token":"square_token",
+      "publish_key":"stripe_publish_key",
+      "unique_id":"squareup"
+    },
+    "cybersource":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "cybersource_merchant_secret_key":"cybersource_merchant_secret_key",
+      "cybersource_merchant_id":"cybersource_merchant_id",
+      "cybersource_merchant_key_id":"cybersource_merchant_key_id",
+      "unique_id":"cybersource"
+    },
+    "payuLatam":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "unique_id":"payuLatam",
+      "basic_auth" : "basic_auth",
+      "payu_latam_api_login" : "payu_latam_api_login",
+      "payu_latam_api_key" : "payu_latam_api_key",
+      "payu_latam_merchant_id" : "payu_latam_merchant_id",
+      "payu_latam_account_id" : "payu_latam_account_id"
+
+    },
+    "paytab":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "paytab_merchant_id":"paytab_merchant_id",
+      "paytab_secret_key":"paytabs_secret_key",
+      "paytab_merchant_email":"merchant_email",
+      "unique_id":"paytab"
+    },
+    "checkout":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "secret_key":"checkout_secret_key",
+      "public_key":"checkout_public_key",
+      "unique_id":"checkout"
+    },
+    "sadded":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "sadded_vendor_id":"sadded_vendor_id",
+      "sadded_branch_id":"sadded_branch_id",
+      "sadded_termianl_id":"sadded_termianl_id",
+      "sadded_api_key":"sadded_api_key",
+      "unique_id":"sadded"
+    },
+    "tap":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "secret_key":"tap_secret_key",
+      "publish_key":"tap_publish_key",
+      "unique_id":"tap"
+    },
+    "mPaisa":{
+      "secret_key":"mPaisa_secret_key",
+      "client_id":"mpaisa_client_id",
+      "unique_id":"mpaisa"
+    },
+    "windcave":{
+      "PxPayUserId":"windave_PxPayUserId",
+      "PxPayKey":"windcave_PxPayKey",
+      "unique_id":"windcave"
+    },
+    "peach":{
+      "cancel_url":"https://billing.royoapps.com/payment-error",
+      "success_url":"https://billing.royoapps.com/payment-success",
+      "peach_auth_token":"peach_auth_token",
+      "peach_entityid":"peach_entityid",
+      "unique_id":"peach"
+    },
+    "paymaya":{
+      "unique_id":"paymaya",
+      "basic_auth":"cGstWjBPU3pMdkljT0kyVUl2RGhkVEdWVmZSU1NlaUdTdG5jZXF3VUU3bjBBaDo=",
+ 
+      "basic_auth_customer":"c2stWDhxb2xZank2MmtJekVicjBRUksxaDRiNEtEVkhhTmN3TVlrMzlqSW5TbDo"
+    },
+    "urway":{
+      "unique_id":"urway",
+      "basic_auth" : "basic_auth",
+      "merchent_key": "a9c4fe56a331d590ca84cb1de28cfd1a2e880e5e588b85ee658df51e1c1ffaab",
+       "user":"rushdelive",
+       "password":"rushdelivery@123"
+    },
+    "authorize_net":{
+      "unique_id":"authorize_net",
+      "transaction_key":"transaction_key",
+      "api_login_id":"api_login_id"
+    },
+    "telr":{
+      "unique_id":"telr",
+      "telr_store_id":"telr_store_id",
+      "telr_authkey":"telr_authkey",
+      "telr_merchent_id":"merchent_id",
+      "telr_api_key":"api_key"
+    },
+    "clover":{
+      "unique_id" : "clover",
+      "public_token": "4c5e228506fd27413f45a50b58f40c25",
+      "secret_token" : "f75e277c-26b7-2187-f08f-680ab3e88ed2"
+  }
+  },
+  "smtp": {
+    "from_email_key": "from_email",
+    "password_key": "password",
+    "smptp_service_key": "smtp_service_name"
+  },
+  "agent":{
+    "jwt_secret_key":"@123!Abcdw^%wee",
+    "api_link":"https://onboarding-agent.royoapps.com",
+    "registeration":"/agent/registeration",
+    "agent_service_list":"/sevice/agent/list",
+    "assign_order":"/order/assignment",
+    "return_assign_order":"/order/return_assignment",
+    "set_agent_availability":"/agent/setAvailability",
+    "assign_order_by_location":"/order/location/assignment",
+    "update_agent_availability":"/agent/updateAvailability",
+    "get_agent_availability":"/agent/getAvailability",
+    "api_key":"api_key",
+    "db_secret_key":"secret_key",
+    "delete_agent_timing":"/agent/deleteTime"
+ },
+ "databaseSettings": {
+  "jwt_secret_key":"@123!Abcdw^%wee",
+  "host": "localhost",
+  "user": "root",
+  "password": "",
+  "database": "",
+  "cbl_host": "localhost",
+  "cbl_user":"root",
+  "cbl_password": "core2duo$",
+  "cbl_database": "code_brew_test"
+  },
+  "mongoDb": {
+    "host": "localhost",
+    "user": "royodbsuperadmin",
+    "port":"27017",
+    "password": "U0e432375!aywkXC!eE",
+    "database": "cbl_super_admin"
+  },  
+  "EmailCredentials": {
+    "email": "postmaster@mail.royoapps.com",
+    "password": "72abbfeebedb6dd1c6ee36a805fd3f73-af6c0cec-b1905957"
+  },
+
+  "adminEmail":"prince@code-brew.com",
+
+  "PORT":6002,
+  "s3BucketCredentials": {
+    "bucket": "",
+    "accessKeyId": "",
+    "secretAccessKey": "",
+    "s3URL": "https://royo.imgix.net"
+  },
+  "TwilioCredentials": {
+    "email": "",
+    "password": ""
+  },
+  "PushNotificationSettings":{
+    "FCMkeySupplier":"AIzaSyDaBa262f37DpxFPtraVbhgr2Ax7z5eCwo",
+    "FCMkeyBranch":"AIzaSyCqxkrhIxh1MPEakvtyP3NXRTGJsMZv1Ok",
+    "GCMkey":"AIzaSyAKr50DHKVWNb3oUPvQzAWi7oGtTnZWokY",
+    "pemFile":"",
+    "iosGateway":""
+  },
+  "google_keys" : {
+    "google_map_key":"AIzaSyABNhau-aOv8kaYmBlWCa2KeuwhZ8jhJys"
+  },
+  "defaultLogo": ""
+}

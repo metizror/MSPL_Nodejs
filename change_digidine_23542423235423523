@@ -1,0 +1,35 @@
+
+terminology
+{"english":{"status":{"0":"","1":"","2":"","3":"","4":"","5":"","6":"","7":"","8":"","9":"","10":"","11":""},"promo_code":"","promotions":"","delivery_timing":"Opening Hours","product":"Menu","products":"Menus","supplier":"","suppliers":"","order":"","orders":"","agent":"","agents":"","brand":"","brands":"","category":"","categories":"","catalogue":""},"other":{"status":{"0":"","1":"","2":"","3":"","4":"","5":"","6":"","7":"","8":"","9":"","10":"","11":""},"promo_code":"","promotions":"","delivery_timing":"","product":"","products":"","supplier":"","suppliers":"","order":"","orders":"","agent":"","agents":"","brand":"","brands":"","category":"","categories":"","catalogue":""}}
+
+bypass_otp: 1
+no_catalogue = 1;
+no_food_item_admin = 1;
+food_item_image_optional = 1;
+food_item_desc_optional = 1;
+category_desc_optional = 1;
+no_rating_review = 1;
+no_send_notification = 1;
+no_user_email = 1;
+no_online_orders = 1;
+
+`tbl_setting`
+(NULL, 'no_catalogue', '1', '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+
+
+
+Change request:
+
+ALTER TABLE `product_adds_on_type` CHANGE `price` `price` DECIMAL(5,2) NOT NULL DEFAULT '0';
+UPDATE `check_cbl_authority` SET `is_white_label` = '1' WHERE `check_cbl_authority`.`id` = 1;
+
+
+
+Changes:
+isCategoryNeedAdminApproval = 1/0  (Boolean)
+
+
+DB Changes:
+
+1) INSERT INTO `tbl_setting` (`id`, `key`, `for_front_end`, `value`, `deleted_by`, `created_at`, `updated_at`) VALUES (NULL, 'isCategoryNeedAdminApproval', '0', '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+2) ALTER TABLE `supplier_category` ADD `isAdminApproveCategory` TINYINT NULL DEFAULT NULL COMMENT 'isAdminApproved, if 1 then live=1, is_deleted=0 in categories tbl' AFTER `sub_category_id`;

@@ -1,0 +1,3 @@
+name,nameInOl,description,descriptionInOl,quantity,image,price,handlingFee,discountInPercentage,priceValidFromDate,priceValidToDate
+Jan Elkins,Jan Elkins,Tsst,desc,1,Https://,10,0,0,2020-01-02,2020-12-12
+Jan Elkins,Jan Elkins,Tsst,Desc,1,Https://,20,0,0,2020-1-2,2020-11-11

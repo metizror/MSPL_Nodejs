@@ -1,0 +1,9 @@
+********Ishan ***:
+
+addCollectFieldInAddress = 1/0  (Boolean)
+
+Note:
+
+1) INSERT INTO `tbl_setting` (`id`, `key`, `for_front_end`, `value`, `deleted_by`, `created_at`, `updated_at`) VALUES (NULL, 'addCollectFieldInAddress', '1', '1', '0', '2020-02-19 10:33:02', '2020-02-19 10:33:02');
+2) ALTER TABLE `user_address` ADD `collectNumber` VARCHAR(500) NULL DEFAULT NULL COMMENT 'click/ collect no. ' AFTER `is_default`;
+3) INSERT INTO `tbl_setting` (`id`, `key`, `for_front_end`, `value`, `deleted_by`, `created_at`, `updated_at`) VALUES (NULL, 'addDocumentsInAgent', '1', '1', '0', '2020-02-19 10:33:02', '2020-02-19 10:33:02');

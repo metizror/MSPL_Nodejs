@@ -1,0 +1,43 @@
+h2 admin login
+form(action='/supplier_login', method='post')
+    | email :
+    input(type='text', name='email')
+    br
+    | password :
+    input(type='text', name='password')
+    br
+    | supplier admin or branch
+    input(type='text' , name='sub')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 get supplier home data
+form(action='/get_supplier_home_data',method='post')
+    | accessToken :
+    input(type='text',name='accessToken')
+    br
+    | sectionIdFromFront
+    input(type='text',name='sectionIdFromFront')
+    br
+    |filter(filter (0:today,1:weekly,2:monthly,--------- 0*))
+    input(type='text',name='filter')
+    br
+    | sub (1 supplier admin | 0 branch)
+    input(type='text',name='sub')
+    br
+    input(type='submit')
+
+h2 get supplier Branch home data
+form(action='/get_supplier_branch_home_data',method='post')
+    | accessToken :
+    input(type='text',name='accessToken')
+    br
+    |filter(filter (0:today,1:weekly,2:monthly,--------- 0*))
+    input(type='text',name='filter')
+    br
+    | sectionIdfrom front end
+    input(type='text' ,name='sectionIdFromFront')
+    br
+    input(type='submit')

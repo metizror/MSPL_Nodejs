@@ -1,0 +1,343 @@
+h2 save supplier extranet profile tab1
+form(action='/save_supplier_profile_extranet_tab1', method='post',enctype="multipart/form-data")
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    | supplierEmail:
+    input(type='text', name='supplierEmail')
+    br
+    | supplierName:
+    input(type='text', name='supplierName')
+    br
+    | languageId:
+    input(type='text', name='languageId')
+    br
+    | isRecommended:
+    input(type='text', name='isRecommended')
+    br
+    | pricingLevel:
+    input(type='text', name='pricingLevel')
+    br
+    | handlingAdmin:
+    input(type='text', name='handlingAdmin')
+    br
+    | handlingSupplier:
+    input(type='text', name='handlingSupplier')
+    br
+    | isUrgent:
+    input(type='text', name='isUrgent')
+    br
+    | isPostponed:
+    input(type='text', name='isPostponed')
+    br
+    | currentStatus:
+    input(type='text', name='currentStatus')
+    br
+    | address:
+    input(type='text', name='address')
+    br
+    | telephone:
+    input(type='text', name='telephone')
+    br
+    | fax:
+    input(type='text', name='fax')
+    br
+    | primaryMobile:
+    input(type='text', name='primaryMobile')
+    br
+    | secondaryMobile:
+    input(type='text', name='secondaryMobile')
+    br
+    | categoryString:
+    input(type='text', name='categoryString')
+    br
+    | tradeLicenseNo:
+    input(type='text', name='tradeLicenseNo')
+    br
+    | logo:
+    input(type='file', name='logo')
+    br
+    | supplierImage:
+    input(type='file', name='supplierImage')
+    br
+    | commissionType:
+    input(type='text', name='commissionType')
+    br
+    | commission:
+    input(type='text', name='commission')
+    br
+    | commissionPackage:
+    input(type='text', name='commissionPackage')
+    br
+    | urgentType:
+    input(type='text', name='urgentType')
+    br
+    | urgentPrice:
+    input(type='text', name='urgentPrice')
+    br
+    | startDate:
+    input(type='text', name='startDate')
+    br
+    | endDate:
+    input(type='text', name='endDate')
+    br
+    | monthPrice:
+    input(type='text', name='monthPrice')
+    br
+    | multilanguageId:
+    input(type='text', name='multilanguageId')
+    br
+    | subscriptionId:
+    input(type='text', name='subscriptionId')
+    br
+    | photoStatus:
+    input(type='text', name='photoStatus')
+    br
+    | logoUrl:
+    input(type='text', name='logoImageUrl')
+    br
+    | supplierphotoStatus:
+    input(type='text', name='supplierphotoStatus')
+    br
+    | supplierImageUrl:
+    input(type='text', name='supplierImageUrl')
+    br
+    | businessStartDate:
+    input(type='text', name='businessStartDate')
+    br
+    | Payment Method:
+    input(type='text', name='paymentMethod')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 Supplier extranet info tab 1 (Profile)
+form(action='/get_supplierExtranet_info_tab1', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 Supplier Extranet info tab 2 (DelivsupplierIdery Areas and branches)
+form(action='/get_supplier_extranet_info_tab2', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2  add_supplier_delivery_areas supplier extranet
+form(action='/add_supplier_extranet_delivery_areas', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    | deliveryAreaIds:
+    input(type='text', name='deliveryAreaIds')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 change_branch_status supplier extranet
+form(action='/change_supplier_extranet_branch_status', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    | branchId:
+    input(type='text', name='branchId')
+    br
+    | status:
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 change_status_by_supplier
+form(action='/change_status_by_supplier', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | status:
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 delete_branch supplier extranet
+form(action='/delete_supplier_extranet_branch', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    | branchId:
+    input(type='text', name='branchId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+h2 list unassigned areas supplier extranet
+form(action='/list_unassigned_areas_supplier_extranet', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 remove supplier delivery areas supplier extranet
+form(action='/remove_supplier_extranet_delivery_area', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | id :
+    input(type='text', name='id')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list country ids supplier extranet
+form(action='/list_supplier_extranet_country_ids', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list area ids supplier extranet
+form(action='/list_supplier_extranet_area_ids', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | zoneId :
+    input(type='text', name='zoneId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 add branch supplier extranet
+form(action='/add_branch_supplier_extranet', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | supplierBranchId :
+    input(type='text', name='supplierBranchId')
+    br
+    | name :
+    input(type='text', name='name')
+    br
+    | branchName :
+    input(type='text', name='branchName')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | email :
+    input(type='text', name='email')
+    br
+    | password :
+    input(type='text', name='password')
+    br
+    | phone :
+    input(type='text', name='phone')
+    br
+    | primaryMobile :
+    input(type='text', name='primaryMobile')
+    br
+    | secondaryMobile :
+    input(type='text', name='secondaryMobile')
+    br
+    | address :
+    input(type='text', name='address')
+    br
+    | areaId :
+    input(type='text', name='areaId')
+    br
+    | multiLanguageId :
+    input(type='text', name='multiLanguageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 get supplier extranet info tab 3 (description, terms and conditions)
+form(action='/get_supplier_extranet_info_tab3', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+h2 save supplier extranet info tab 3 (description, terms and conditions)
+form(action='/save_supplier_profile_extranet_tab3', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    | descriptionId:
+    input(type='text', name='descriptionId')
+    br
+    | description:
+    input(type='text', name='description')
+    br
+    | uniqueness:
+    input(type='text', name='uniqueness')
+    br
+    | t_and_c:
+    input(type='text', name='t_and_c')
+    br
+    | languageId:
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr

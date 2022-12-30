@@ -1,0 +1,1273 @@
+h2 get all category
+form(action='/get_all_category', method='post')
+    | countryId :
+    input(type='text',name='countryId')
+    br
+    | areaId :
+    input(type='text',name='areaId')
+    br
+    | accessToken :
+    input(type='text',name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+
+h2 get all country list
+form(action='/get_all_country', method='post')
+    | languageId :
+    input(type='text',name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+
+
+
+h2 get all city list
+form(action='/get_all_city', method='post')
+        | countryId :
+        input(type='text', name='countryId')
+        br
+        | languageId :
+        input(type='text', name='languageId')
+        br
+        input(type='submit',value='submit')
+        hr
+        hr
+
+
+
+h2 get all zone list
+form(action='/get_all_zone', method='post')
+    | cityid :
+    input(type='text', name='cityId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 get all area list
+form(action='/get_all_area', method='post')
+    | cityid(separated by #) :
+    input(type='text', name='zoneId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 get supplierInfo
+form(action='/supplier_details', method='post')
+    br
+    | supplierId :
+    input(type='text', name='supplierId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | branchId :
+    input(type='text', name='branchId')
+    br
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | categoryId :
+    input(type='text', name='categoryId')
+    br
+    | areaId :
+    input(type='text', name='area_id')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+
+h2 get subcategory
+form(action='/subcategory_listing', method='post')
+    br
+    | supplierId :
+    input(type='text', name='supplierId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | categoryId :
+    input(type='text', name='categoryId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+
+
+h2 get subcategory details
+form(action='/detailed_subcategory_listing', method='post')
+    br
+    | supplierId :
+    input(type='text', name='supplierId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | subcategoryId :
+    input(type='text', name='subcategoryId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+
+
+
+h2 customer Register step first
+form(action='/customer_register_step_first', method='post')
+        br
+        | email :
+        input(type='text', name='email')
+        br
+        | deviceToken :
+        input(type='text', name='deviceToken')
+        br
+        | deviceType :
+        input(type='text', name='deviceType')
+        br
+        | latitude :
+        input(type='text', name='latitude')
+        br
+        | longitude:
+        input(type = 'text',name ='longitude')
+        br
+        br
+        | areaId :
+        input(type='text', name='areaId')
+        br
+        | password :
+        input(type='text', name='password')
+        br
+        | languageId :
+        input(type='text', name='languageId')
+        br
+        input(type='submit',value='submit')
+        br
+        hr
+        hr
+
+h2 customer Register Step 2
+form(action='/customer_register_step_second', method='post')
+    br
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | countryCode :
+    input(type='text', name='countryCode')
+    br
+    | mobileNumber :
+    input(type='text', name='mobileNumber')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 verify otp
+form(action='/check_otp', method='post')
+    br
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | otp :
+    input(type='text', name='otp')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+
+
+
+h2 user login
+form(action='/login', method='post')
+    br
+    | login :
+    input(type='text', name='email')
+    br
+    | password :
+    input(type='text', name='password')
+    br
+    | device token :
+    input(type='text', name='deviceToken')
+    br
+    | device type :
+    input(type='text', name='deviceType')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 supplier list
+form(action='/get_supplier_list', method='post')
+    br
+    | area_id :
+    input(type='text', name='areaId')
+    br
+    | category_id :
+    input(type='text', name='categoryId')
+    br
+    | language_id :
+    input(type='text', name='languageId')
+    br
+    | subCat :
+    input(type='text', name='subCat')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 customer  register step 3
+form(action='/customer_register_step_third', method='post',enctype="multipart/form-data")
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | name:
+    input(type='text', name='name')
+    br
+    | image:
+    input(type='file', name='profilePic')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 customer add new address
+form(action='/add_new_address', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | addressLineFirst:
+    input(type='text', name='addressLineFirst')
+    br
+    | addressLineSecond:
+    input(type='text', name='addressLineSecond')
+    br
+    | pincode:
+    input(type='text', name='pincode')
+    br
+    | areaId:
+    input(type='text', name='areaId')
+    br
+    | landmark:
+    input(type='text', name='landmark')
+    br
+    | name:
+    input(type='text', name='name')
+    br
+    | Address Link:
+    input(type='text', name='address_link')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 get all register address
+form(action='/get_all_customer_address', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | supplierBranchId :
+    input(type='text', name='supplierBranchId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 delete address
+form(action='/delete_customer_address', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | addressId:
+    input(type='text', name='addressId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 get Product
+form(action='/get_products', method='post')
+    | supplierBranchId:
+    input(type='text', name='supplierBranchId')
+    br
+    | languageId:
+    input(type='text', name='languageId')
+    br
+    | subCategoryId:
+    input(type='text', name='subCategoryId')
+    br
+    | countryId:
+    input(type='text', name='countryId')
+    br
+    | areaId:
+    input(type='text', name='areaId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 get complete product details
+form(action='/get_product_details',method='post')
+    | productId
+    input(type='text', name='productId')
+    br
+    | languageId
+    input(type='text', name='languageId')
+    br
+    | supplierBranchId
+    input(type='text', name='supplierBranchId')
+    br
+    | areaId
+    input(type='text', name='areaId')
+    br
+    | offer
+    input(type='text', name='offer')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+
+
+
+
+
+h2 edit address
+form(action='/edit_address',method='post')
+    | accessToken
+    input(type='text', name='accessToken')
+    br
+    | addressId
+    input(type='text', name='addressId')
+    br
+    | addressLineFirst
+    input(type='text', name='addressLineFirst')
+    br
+    | addressLineSecond
+    input(type='text', name='addressLineSecond')
+    br
+    | pincode
+    input(type='text', name='pincode')
+    br
+    | areaId
+    input(type='text', name='areaId')
+    br
+    | landmark
+    input(type='text', name='landmark')
+    br
+    | name
+    input(type='text', name='name')
+    br
+    | address_link
+    input(type='text', name='address_link')
+    br
+    | customer_address
+    input(type='text', name='customer_address')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 addToCart
+form(action='/add_to_cart',method='post',enctype="multipart/form-data")
+    | accessToken
+    input(type='text', name='accessToken')
+    br
+    | supplierBranchId
+    input(type='text', name='supplierBranchId')
+    br
+    | productList
+    input(type='text', name='productList')
+    br
+    | remarks
+    input(type='text', name='remarks')
+    br
+    |deviceiD (0:ANDROID , 1:IOS)
+    input(type='text',name='deviceId')
+    br
+    | netAmount
+    input(type='text',name='netAmount')
+    br
+    | remarkImage
+    input(type='file', name='remarksImage')
+    br
+    | remarkImage
+    input(type='file', name='remarksImage')
+    br
+    | promoationType (optional)(value 1)
+    input(type='text', name='promoationType')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+
+h2 add_to_favourite
+form(action='/add_to_favourite',method='post')
+    | accessToken
+    input(type='text', name='accessToken')
+    br
+    | supplierId
+    input(type='text', name='supplierId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 update_cart_info
+form(action='/update_cart_info',method='post')
+    | accessToken
+    input(type='text', name='accessToken')
+    br
+    | cartId
+    input(type='text', name='cartId')
+    br
+    | deliveryId
+    input(type='text', name='deliveryId')
+    br
+    | deliveryType
+    input(type='text', name='deliveryType')
+    br
+    | deliveryDate
+    input(type='text', name='deliveryDate')
+    br
+    | deliveryTime
+    input(type='text', name='deliveryTime')
+    br
+    | pickupDate
+    input(type='text' , name='pickupDate')
+    br
+    |pickupTime
+    input(type='text',name='pickupTime')
+    | pickupId
+    input(type='text', name='pickupId')
+    br
+    |handlingAdmin
+    input(type='text', name='handlingAdmin')
+    br
+    | handlingSupplier
+    input(type='text', name='handlingSupplier')
+    br
+    | deliveryCharges
+    input(type='text' ,name='deliveryCharges')
+    br
+    |currenyId
+    input(type='text',name='currencyId')
+    br
+    |minOrderDeliveryCrossed
+    input(type='text',name='minOrderDeliveryCrossed')
+    br
+    |netAmount
+    input(type='text',name='netAmount')
+    br
+    |urgentPrice
+    input(type='text',name='urgentPrice')
+    br
+    |remarks
+    input(type='text',name='remarks')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 post_image_resize
+form(action='/post_image_resize', method='post')
+    | path :
+    input(type='text', name='path')
+    br
+    | width :
+    input(type='text', name='width')
+    br
+    | height :
+    input(type='text', name='height')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 multi search
+form(action='/multi_search', method='post')
+    | supplierBranchId :
+    input(type='text', name='supplierBranchId')
+    br
+    | categoryId :
+    input(type='text', name='categoryId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | searchList :
+    input(type='text', name='searchList')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 get delivery type
+form(action='/delivery_type',method='post')
+    | supplierBranchId :
+    input(type='text', name='supplierBranchId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | areaId :
+    input(type='text', name='areaId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 order
+form(action='/genrate_order',method='post')
+    | cartId :
+    input(type='text', name='cartId')
+    br
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | paymentType (0:cash , 1:debit )
+    input(type='text',name='paymentType')
+    br
+    | isPackage (0:Nopackage , 1:package )
+    input(type='text',name='isPackage')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 resend otp
+form(action='/resend_otp',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 supplier Rating
+form(action='/supplier_rating',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | supplierId :
+    input(type='text', name='supplierId')
+    br
+    | rating :
+    input(type='text', name='rating')
+    br
+    | comment :
+    input(type='text', name='comment')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 get My Favourite
+form(action='/get_my_favourite',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | areaId :
+    input(type='text', name='areaId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 change Password
+form(action='/change_password',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | oldPassword :
+    input(type='text', name='oldPassword')
+    br
+    | newPassword :
+    input(type='text', name='newPassword')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 notification on or off
+form(action='/on_off_notification',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | status :
+    input(type='text', name='status')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 notification language
+form(action='/notification_language',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 history Order
+form(action='/history_order',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 upcoming Order
+form(action='/upcoming_order',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId
+    input(type='text',name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 laundary supplier list
+form(action='/laundary_supplier_list',method='post')
+    | date (monday :0,then 1,2,3........):
+    input(type='text', name='date')
+    br
+    | time :
+    input(type='text', name='time')
+    br
+    | areaId :
+    input(type='text', name='areaId')
+    br
+    | categoryId :
+    input(type='text', name='categoryId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+
+h2 fb login
+form(action='/facebook_login',method='post')
+    | facebookToken :
+    input(type='text', name='facebookToken')
+    br
+    | name :
+    input(type='text', name='name')
+    br
+    | email :
+    input(type='text', name='email')
+    br
+    | image :
+    input(type='text', name='image')
+    br
+    | deviceToken :
+    input(type='text', name='deviceToken')
+    br
+    | deviceType :
+    input(type='text', name='deviceType')
+    br
+    | phoneNo :
+    input(type='text', name='phoneNo')
+    br
+    | area_id :
+    input(type='text', name='area_id')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 schedule order
+form(action='/schedule_order',method='post')
+    | orderId :
+    input(type='text', name='orderId')
+    br
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | status 1:weekly ,2:monthly:
+    input(type='text', name='status')
+    br
+    | delivery_time :
+    input(type='text', name='delivery_time')
+    br
+    |weekly_arr  ) 0:monday , 1:tuesday ex [0,1]
+    input(type='text',name='weekly_arr')
+    br
+    |monthly_arr : ex.[12,24,30]
+    input(type='text',name='monthly_arr')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 show package category
+form(action='/package_category',method='post')
+    | areaId :
+    input(type='text', name='areaId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 show package product
+form(action='/package_product',method='post')
+    | areaId :
+    input(type='text', name='areaId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | supplierBranchId :
+    input(type='text', name='supplierBranchId')
+    br
+    | categoryId :
+    input(type='text', name='categoryId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+
+h2 loyalty product
+form(action='/get_loyality_product',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | areaId :
+    input(type='text', name='areaId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 get promoation product
+form(action='/get_promoation_product',method='post')
+    | areaId :
+    input(type='text', name='areaId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 cancel order
+form(action='/cancel_order',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | orderId :
+    input(type='text', name='orderId')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 update schedule order status
+form(action='/update_schedule_order_status',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    |orderId
+    input(type='text',name='orderId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 get laundry product
+form(action='/get_laundry_product',method='post')
+    | categoryId :
+    input(type='text', name='categoryId')
+    br
+    | languageId
+    input(type='text',name='languageId')
+    br
+    | supplierBranchId
+    input(type='text',name='supplierBranchId')
+    br
+    | areaId
+    input(type='text',name='areaId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 get_image_resize
+form(action='/get_image_resize', method='get')
+    | path :
+    input(type='text', name='path')
+    br
+    | width :
+    input(type='text', name='width')
+    br
+    | height :
+    input(type='text', name='height')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 rate order list
+form(action='/rate_my_order_list',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 track order list
+form(action='/track_order_list',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 supplier list
+form(action='/supplier_category_list',method='post')
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | supplierId :
+    input(type='text', name='supplierId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 bar code
+form(action='/bar_code',method='post')
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | barCode :
+    input(type='text', name='barCode')
+    br
+    | supplierBranchId :
+    input(type='text', name='supplierBranchId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 user order rating
+form(action='/user_rate_order',method='post')
+    | languageId * :
+    input(type='text', name='languageId')
+    br
+    | orderId * :
+    input(type='text', name='orderId')
+    br
+    | accessToken * :
+    input(type='text', name='accessToken')
+    br
+    | rating :
+    input(type='text', name='rating')
+    br
+    | comment :
+    input(type='text', name='comment')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 track order
+form(action='/order_track',method='post')
+    | languageId * :
+    input(type='text', name='languageId')
+    br
+    | orderId * :
+    input(type='text', name='orderId')
+    br
+    | accessToken * :
+    input(type='text', name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 get all notification
+form(action='/get_all_notification',method='post')
+    |accessToken * :
+    input(type='text', name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 clear all notification
+form(action='/clear_all_notification',method='post')
+    |accessToken * :
+    input(type='text', name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 clear one notification
+form(action='/clear_notification',method='post')
+    |accessToken * :
+    input(type='text', name='accessToken')
+    br
+    | notificationId * :
+    input(type='text', name='notificationId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 un favourite
+form(action='/un_favourite',method='post')
+    | accessToken * :
+    input(type='text', name='accessToken')
+    br
+    | supplierId * :
+    input(type='text', name='supplierId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 change_location
+form(action='/change_location',method='post')
+    | cityId * :
+    input(type='text', name='cityId')
+    br
+    | countryId * :
+    input(type='text', name='countryId')
+    br
+    | zoneId * :
+    input(type='text', name='zoneId')
+    br
+    | areaId * :
+    input(type='text', name='areaId')
+    br
+    | languageId * :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 loyalty points order
+form(action='/loyality_order',method='post')
+    | accessToken * :
+    input(type='text', name='accessToken')
+    br
+    | supplierBranchId * :
+    input(type='text', name='supplierBranchId')
+    br
+    | productList [1,2,3,4,5](productId)* :
+    input(type='text', name='productList')
+    br
+    | deliveryType * :
+    input(type='text', name='deliveryType')
+    br
+    | deliveryAddressId * :
+    input(type='text', name='deliveryAddressId')
+    br
+    | totalPoints *:
+    input(type='text', name='totalPoints')
+    br
+    | deliveryDate *:
+    input(type='text', name='deliveryDate')
+    br
+    | isPostponed  :
+    input(type='text', name='isPostponed')
+    br
+    | urgent  :
+    input(type='text', name='urgent')
+    br
+    | urgentPrice  :
+    input(type='text', name='urgentPrice')
+    br
+    | remarks  :
+    input(type='text', name='remarks')
+    br
+    | languageId *  :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 confirm order
+form(action='/confirm_order',method='post')
+    | accessToken * :
+    input(type='text', name='accessToken')
+    br
+    | orderId * :
+    input(type='text', name='orderId')
+    br
+    | languageId * :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 testing
+form(action='/testing',method ='post')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 forget_password
+form(action='/forget_password',method='post')
+    | emailId * :
+    input(type='text', name='emailId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 view_all_offer
+form(action='/view_all_offer',method='post')
+        | areaId * :
+        input(type='text', name='areaId')
+        br
+        | languageId * :
+        input(type='text', name='languageId')
+        br
+        input(type='submit',value='submit')
+        br
+        hr
+
+
+h2 change profile image
+form(action='/change_profile', method='post',enctype="multipart/form-data")
+    | accessToken:
+    input(type='text', name='accessToken')
+    | profilePic:
+    input(type='file', name='profilePic')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+
+h2 compare product
+form(action='/compare_product', method='post')
+    | skuCode:
+    input(type='text', name='skuCode')
+    br
+    | areaId:
+    input(type='text', name='areaId')
+    br
+    | languageId:
+    input(type='text', name='languageId')
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+
+h2 get serach product accoding to area id
+form(action='/product_acco_to_area', method='post')
+    | productName:
+    input(type='text', name='productName')
+    br
+    | areaId:
+    input(type='text', name='areaId')
+    br
+    | languageId:
+    input(type='text', name='languageId')
+    br
+    | startValue:
+    input(type='text', name='startValue')
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 supplier image with id
+form(action='/supplier_image', method='post')
+    | branchId:
+    input(type='text', name='branchId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 import product
+form(action='/import_admin_product', method='post',enctype="multipart/form-data")
+    | path:
+    input(type='file', name='fileName')
+    br
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Schedule Order
+form(action='/schedule_orders',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId
+    input(type='text',name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 refresh
+form(action='/refresh_buttton',method='post')
+    | supplierId :
+    input(type='text', name='supplierId')
+    br
+    | suppllierBranchId
+    input(type='text',name='suppllierBranchId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 pending and schedule Count
+form(action='/get_total_pending_schedule',method='post')
+    | accessToken
+    input(type='text',name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+
+
+h2 testing_andriod
+form(action='/testing_andriod',method='post')
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+
+
+
+h2 check app version
+form(action='/check_app_version',method='post')
+    | deviceType
+    input(type='text',name='deviceType')
+    br
+    | appType
+    input(type='text',name='appType')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+

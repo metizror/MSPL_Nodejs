@@ -1,0 +1,6 @@
+********Elaaj***:
+
+Compulsory:
+bypass_otp: 1
+
+INSERT INTO `tbl_setting` (`id`, `key`, `for_front_end`, `value`, `deleted_by`, `created_at`, `updated_at`) VALUES (NULL, 'bypass_otp', '0', '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

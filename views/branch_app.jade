@@ -1,0 +1,119 @@
+//
+   Created by cbl102 on 25/8/16.
+
+
+h2 order_management
+form(action='/branch_order_management', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 branch app login
+form(action='/branch_login', method='post')
+    | email :
+    input(type='text', name='email')
+    br
+    | password :
+    input(type='text', name='password')
+    br
+    | deviceToken :
+    input(type='text', name='deviceToken')
+    br
+    | deviceType :
+    input(type='text', name='deviceType')
+    br
+    input(type='submit',value='submit')
+    br
+
+h2 list_pending_orders
+form(action='/list_branch_pending_orders', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | isUrgent :
+    input(type='text', name='isUrgent')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 list_pending_tracking_alerts
+form(action='/list_branch_pending_tracking_alerts', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 list_scheduled_orders_for_tomorrow
+form(action='/list_branch_scheduled_orders_for_tomorrow', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 accept_order
+form(action='/branch_accept_order', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | orderId :
+    input(type='text', name='orderId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 reject_order
+form(action='/branch_reject_order', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | orderId :
+    input(type='text', name='orderId')
+    br
+    | rejectionReason :
+    input(type='text', name='rejectionReason')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 cancel_order
+form(action='branch_cancel_order', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+

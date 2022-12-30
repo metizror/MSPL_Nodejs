@@ -1,0 +1,131 @@
+/*navbar*/
+.navbar
+{background:#224356;
+}
+.logo
+{
+	height:50px;
+	padding:8%;
+}
+
+.api
+{
+
+
+	    border-right: 2px solid #f0f2f1;
+
+	left: 0;
+
+}
+ul.list
+{
+	text-decoration: none;
+	  list-style-type: none;
+	padding-left: 10px;
+
+
+}
+ul > li
+{
+	padding-top:3%;
+	padding-bottom:3%;
+	border: 1px solid #224356;
+	border-radius: 5px;
+	color: #224356;
+
+	text-align: center;
+}
+
+a{
+	text-decoration: none;
+	font-weight: 600;
+
+
+	color: #224356;
+
+}
+.data
+{
+	padding: 2% 5% !important;
+}
+
+.panel
+{
+	margin-top: 5%;
+}
+.info
+{
+	border-right: 2px solid #f0f2f1;
+
+
+}
+.top-margin
+{
+	margin-top:5%;
+
+}
+.left-margin
+{
+	margin-left:5%;
+}
+.panel-default>.panel-heading {
+
+	background-color: #224356;
+	/*opacity: .7;*/
+	color: white;
+}
+.response
+{
+	height:460px;
+	margin-right: 10px;
+	margin-left: 10px;
+
+}
+.result
+{
+	position: fixed;
+	right: 0;
+}
+.button {
+	background-color: #224356;
+	/* Green */
+	border-radius: 5px;
+	color: white;
+	border: transparent;
+	padding: 8px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+}
+.button1 {
+	background-color: white;
+	/* Green */
+
+	color: #224356;
+	border: transparent;
+	padding: 4px 12px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+	float: right;
+	opacity: 2 !important;
+	z-index: 1000;
+}
+h3
+{
+	color:#224356 ;
+}
+
+/*form*/
+.form-group
+{
+	margin: 0px !important;
+}
+
+/*collapse*/
+.list-group
+{
+	text-decoration: none;
+}

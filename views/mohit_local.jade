@@ -1,0 +1,1748 @@
+//
+   Created by cbl98 on 6/5/16.
+
+h2 add subsupplier  by supplier
+form(action='/add_subsupplier_by_supplier', method='post')
+    | access_token :
+    input(type='text', name='accessToken')
+    br
+    | supplierMobileNo:
+    input(type='text', name='supplierMobileNo')
+    br
+    | supplierEmail:
+    input(type='text', name='supplierEmail')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list Subsupplier
+form(action='/list_subsupplier', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 change_subsupplier_status
+form(action='/change_subsupplier_status', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | subsupplierId:
+    input(type='text', name='subsupplierId')
+    br
+    | status:
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 assign or revoke sections to sub Supplier
+form(action='/assign_or_revoke_sub_supplier_section', method='post')
+    | sub supplier id:
+    input(type='text', name='id')
+    br
+    | supplier-admin access token:
+    input(type='text', name='accessToken')
+    br
+    | section Ids , separated to assign:
+    input(type='text', name='assignSectionIds')
+    br
+    | section Ids , separated to revoke:
+    input(type='text', name='revokeSectionIds')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 get supplier data to view by id
+form(action='/all_section_list_of_subsupplier', method='post')
+    |  supplier-admin access token :
+    input(type='text', name='accessToken')
+    br
+    | sub supplier id
+    input(type='text', name='subsupplierId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Product info
+form(action='/product_info', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | categoryId :
+    input(type='text', name='categoryId')
+    br
+    | subCategoryId :
+    input(type='text', name='subCategoryId')
+    br
+    | detailedSubCategoryId :
+    input(type='text', name='detailedSubCategoryId')
+    br
+    | limit :
+    input(type='text', name='limit')
+    br
+    | offset :
+    input(type='text', name='offset')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 add product
+form(action='/add_product_by_supplier', method='post',enctype="multipart/form-data")
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | categoryId:
+    input(type='text', name='categoryId')
+    br
+    | subCategoryId:
+    input(type='text', name='subCategoryId')
+    br
+    | detailedSubCategoryId:
+    input(type='text', name='detailedSubCategoryId')
+    br
+    | name:
+    input(type='text', name='name')
+    br
+    | languageId:
+    input(type='text', name='languageId')
+    br
+    | priceUnit:
+    input(type='text', name='priceUnit')
+    br
+    | description:
+    input(type='text', name='description')
+    br
+    | sku:
+    input(type='text', name='sku')
+    br
+    | barCode:
+    input(type='text', name='barCode')
+    br
+    | Measuring Unit:
+    input(type='text', name='measuringUnit')
+    br
+    | count:
+    input(type='text', name='count')
+    br
+    | image:
+    input(type='file', name='image')
+    br
+    | image:
+    input(type='file', name='image')
+    br
+    | commission:
+    input(type='text', name='commission')
+    br
+    | commissionPackage:
+    input(type='text', name='commissionPackage')
+    br
+    | commissionType:
+    input(type='text', name='commissionType')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 delete product
+form(action='/delete_product_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | productId :
+    input(type='text', name='productId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 product description
+form(action ='/product_description',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | productId :
+    input(type='text', name='productId')
+    br
+    |languageId:
+    input(type ='text',name='language')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 add product pricing
+form(action='/add_product_pricing_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | productId :
+    input(type='text', name='productId')
+    br
+    | startDate :
+    input(type='text', name='startDate')
+    br
+    | endDate :
+    input(type='text', name='endDate')
+    br
+    | price :
+    input(type='text', name='price')
+    br
+    | handlingFeeSupplier :
+    input(type='text', name='handlingFeeSupplier')
+    br
+    | isUrgent :
+    input(type='text', name='isUrgent')
+    br
+    | urgentPrice :
+    input(type='text', name='urgentPrice')
+    br
+    | urgentType :
+    input(type='text', name='urgentType')
+    br
+    | deliveryCharges :
+    input(type='text', name='deliveryCharges')
+    br
+    | House Cleaning price  :
+    input(type='text', name='houseCleaningPrice')
+    br
+    | Beauty Saloon Price :
+    input(type='text', name='beautySaloonPrice')
+    br
+    | offerType :
+    input(type='text', name='offerType')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 edit product pricing
+form(action='/edit_product_pricing_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | productPricingId :
+    input(type='text', name='productPricingId')
+    br
+    | startDate :
+    input(type='text', name='startDate')
+    br
+    | endDate :
+    input(type='text', name='endDate')
+    br
+    | price :
+    input(type='text', name='price')
+    br
+    | handlingFeeSupplier :
+    input(type='text', name='handlingFeeSupplier')
+    br
+    | isUrgent :
+    input(type='text', name='isUrgent')
+    br
+    | urgentPrice :
+    input(type='text', name='urgentPrice')
+    br
+    | commission :
+    input(type='text', name='commission')
+    br
+    | deliveryCharges :
+    input(type='text', name='deliveryCharges')
+    br
+    | urgentType :
+    input(type='text', name='urgentType')
+    br
+    | commissionType :
+    input(type='text', name='commissionType')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list product pricing
+form(action='/product_pricing', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | productId :
+    input(type='text', name='productId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Admin Order listing
+form(action='/admin_order_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | start range :
+    input(type='text', name='count')
+    br
+    | total numbers :
+    input(type='text', name='offset')
+    br
+    | serachType :
+    input(type='text', name='serachType')
+    br
+    | serachText :
+    input(type='text', name='serachText')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Admin Order Description
+form(action='/order_description', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Admin Pending Orders
+form(action='/pending_orders', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Change Pending Order Status by Admin
+form(action='/confirm_pending_order_by_admin', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(1-Confirmed;2-Reject) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Order Shipped(Admin)
+form(action='/order_shipped_by_admin', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(3-shipped) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Order nearby(Admin)
+form(action='/order_nearby_by_admin', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(4-nearby) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Delivered Order(Admin)
+form(action='/order_delivered_by_admin', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(5-Delivered) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Tracked Order List(Admin)
+form(action='/tracking_order_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Tracked Order Update(Admin)
+form(action='/update_tracked_order', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status:
+    input(type='text', name='status')
+    br
+    | date:
+    input(type='text', name='date')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Supplier Order listing
+form(action='/supplier_order_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Supplier Order Description
+form(action='/supplier_order_description', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Supplier Pending Orders
+form(action='/supplier_pending_orders', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Change Pending Order Status by supplier
+form(action='/confirm_pending_order_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(1-Confirmed;2-Reject) :
+    input(type='text', name='status')
+    br
+    | rejection Reason :
+    input(type='text', name='reason')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Order Shipped(Supplier)
+form(action='/order_shipped_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(3-shipped) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Order nearby(Supplier)
+form(action='/order_nearby_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(4-nearby) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Delivered Order(Supplier)
+form(action='/order_delivered_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(5-Delivered) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Supplier Tracked Order List
+form(action='/supplier_tracking_order_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Tracked Order Update(Supplier)
+form(action='/update_tracked_order_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status:
+    input(type='text', name='status')
+    br
+    | date:
+    input(type='text', name='date')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Branch Order listing
+form(action='/branch_order_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Branch Order Description
+form(action='/btanch_order_description', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Branch Pending Orders
+form(action='/branch_pending_orders', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Change Pending Order Status by Branch
+form(action='/confirm_pending_order_by_branch', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(1-Confirmed;2-Reject) :
+    input(type='text', name='status')
+    br
+    | rejection Reason :
+    input(type='text', name='reason')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Order Shipped(Branch)
+form(action='/order_shipped_by_branch', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(3-shipped) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Order nearby(Branch)
+form(action='/order_nearby_by_branch', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | OrderId :
+    input(type='text', name='order_id')
+    br
+    | Status(4-nearby) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Delivered Order(Branch)
+form(action='/order_delivered_by_branch', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(5-Delivered) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Branch Tracked Order List
+form(action='/branch_tracking_order_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Tracked Order Update(Branch)
+form(action='/update_tracked_order_by_branch', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status:
+    input(type='text', name='status')
+    br
+    | date:
+    input(type='text', name='date')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Account Payable List(Admin)
+form(action='/account_payable_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Account Payable Description(Admin)
+form(action='/payable_description', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | order Id :
+    input(type='text', name='id')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Account Payable Payment(Admin)
+form(action='/account_payament', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | order id :
+    input(type='text', name='id')
+    br
+    | Payment Amount :
+    input(type='text', name='amount')
+    br
+    | Payment Method (0-cash;1-DD;2-cheque;3:NEFT) :
+    input(type='text', name='paymethod')
+    br
+    | Payment transaction Id :
+    input(type='text', name='payId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Account Receivable List(Admin)
+form(action='/account_receivable_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Account Receivable Description(Admin)
+form(action='/receivable_description', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | order Id :
+    input(type='text', name='id')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Account Payable List(Supplier)
+form(action='/supplier_account_payable_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Account Payable Description(Supplier)
+form(action='/supplier_payable_description', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | order Id :
+    input(type='text', name='id')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Account Payable Payment(Supplier)
+form(action='/supplier_account_payament', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | order id :
+    input(type='text', name='id')
+    br
+    | Payment Amount :
+    input(type='text', name='amount')
+    br
+    | Payment Method (0-cash;1-DD;2-cheque;3:NEFT) :
+    input(type='text', name='paymethod')
+    br
+    | Payment transaction Id :
+    input(type='text', name='payId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Account Receivable List(Supplier)
+form(action='/supplier_account_receivable_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Account Receivable Description(Supplier)
+form(action='/supplier_receivable_description', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | order id :
+    input(type='text', name='id')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Admin Account statement
+form(action='/admin_account_statement', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id:
+    input(type='text', name='authSectionId')
+    br
+    | supplier:
+    input(type='text', name='supplier')
+    br
+    | startDate:
+    input(type='text', name='startDate')
+    br
+    | endDate:
+    input(type='text', name='endDate')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Supplier Account statement
+form(action='/supplier_account_statement', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id:
+    input(type='text', name='authSectionId')
+    br
+    | year:
+    input(type='text', name='year')
+    br
+    | month:
+    input(type='text', name='month')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Supplier rating list
+form(action='/supplier_rate_comments__blisting', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id:
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Supplier rating Approved by admin
+form(action='/approved_rate_comment', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id:
+    input(type='text', name='authSectionId')
+    br
+    |supplier rating Id:
+    input(type='text', name='rateId')
+    br
+    |status(1-approved;2-disapproved):
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Order Feedback list
+form(action='/order_feedback_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id:
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Order feedback read by admin
+form(action='/read_order_feedback', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id:
+    input(type='text', name='authSectionId')
+    br
+    | orderid:
+    input(type='text', name='orderId')
+    br
+    | status(1-Read):
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Admin Scheduled Order List
+form(action='/scheduled_order_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Supplier Scheduled Order List
+form(action='/scheduled_order_list_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Supplier country list name
+form(action='/list_supplier_country', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 Supplier city list name
+form(action='/list_supplier_city', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | countryId:
+    input(type='text', name='countryId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 Supplier list zone name
+form(action='/list_supplier_zone', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | city id
+    input(type='text',name='cityId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 Supplier List of area with and their id
+form(action='/list_supplier_area', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | zone id
+    input(type='text' , name='zoneId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+
+
+h2 Supplier update delivery charges by area id
+form(action='/update_area_charge', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | area id
+    input(type='text' , name='areaId')
+    br
+    | delivery charges
+    input(type='text' ,name='deliveryCharges')
+    br
+    | min order
+    input(type='text' ,name='minOrder')
+    br
+    | charges below min order
+    input(type='text' ,name='chargesBelowMinOrder')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2   get_supplier_summary
+form(action='/fetch_supplier_summary', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+
+h2 update_supplier_summary
+form(action='/updated_supplier_summary', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    | deliveryPriorDays:
+    input(type='text', name='deliveryPriorDays')
+    br
+    | deliveryPriorTime:
+    input(type='text', name='deliveryPriorTime')
+    br
+    | deliveryMinTime:
+    input(type='text', name='deliveryMinTime')
+    br
+    | deliveryMaxTime:
+    input(type='text', name='deliveryMaxTime')
+    br
+    | urgentDeliveryTime:
+    input(type='text', name='urgentDeliveryTime')
+    br
+    | timings:
+    input(type='text', name='timings')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+h2 list_branches(Supplier)
+form(action='/list_branches_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list_supplier_categories_for_package(Supplier)
+form(action='/list_supplier_categories_for_package_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list_branch_products_for_promotions(Supplier)
+form(action='/list_branch_products_for_promotions_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | branchId :
+    input(type='text', name='branchId')
+    br
+    | categoryId :
+    input(type='text', name='categoryId')
+    br
+    | subCategoryId :
+    input(type='text', name='subCategoryId')
+    br
+    | detailedSubCategoryId :
+    input(type='text', name='detailedSubCategoryId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list_packages_of_supplier_branch(Supplier)
+form(action='/list_packages_of_supplier_branch_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | branchId :
+    input(type='text', name='branchId')
+    br
+    | categoryId :
+    input(type='text', name='categoryId')
+    br
+    | subCategoryId :
+    input(type='text', name='subCategoryId')
+    br
+    | detailedSubCategoryId :
+    input(type='text', name='detailedSubCategoryId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 add package(Supplier)
+form(action='/add_package_by_supplier', method='post',enctype="multipart/form-data")
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    | branchId:
+    input(type='text', name='branchId')
+    br
+    | productIds:
+    input(type='text', name='productIds')
+    br
+    | categoryId:
+    input(type='text', name='categoryId')
+    br
+    | subCategoryId :
+    input(type='text', name='subCategoryId')
+    br
+    | detailedSubCategoryId :
+    input(type='text', name='detailedSubCategoryId')
+    br
+    | name:
+    input(type='text', name='name')
+    br
+    | languageId:
+    input(type='text', name='languageId')
+    br
+    | priceUnit:
+    input(type='text', name='priceUnit')
+    br
+    | description:
+    input(type='text', name='description')
+    br
+    | measuringUnit:
+    input(type='text', name='measuringUnit')
+    br
+    | sku:
+    input(type='text', name='sku')
+    br
+    | barCode:
+    input(type='text', name='barCode')
+    br
+    | count:
+    input(type='text', name='count')
+    br
+    | image:
+    input(type='file', name='image')
+    br
+    | image:
+    input(type='file', name='image')
+    br
+    | commission:
+    input(type='text', name='commission')
+    br
+    | commissionPackage:
+    input(type='text', name='commissionPackage')
+    br
+    | commissionType:
+    input(type='text', name='commissionType')
+    br
+    | startDate:
+    input(type='text', name='startDate')
+    br
+    | endDate:
+    input(type='text', name='endDate')
+    br
+    | price:
+    input(type='text', name='price')
+    br
+    | displayPrice:
+    input(type='text', name='displayPrice')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+h2 delete_package(Supplier)
+form(action='/delete_package_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | packageId :
+    input(type='text', name='packageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 add_promotion(Supplier)
+form(action='/add_promotion_by_supplier', method='post',enctype="multipart/form-data")
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    | branchId:
+    input(type='text', name='branchId')
+    br
+    | categoryId:
+    input(type='text', name='categoryId')
+    br
+    | subCategoryId:
+    input(type='text', name='subCategoryId')
+    br
+    | detailedSubCategoryId:
+    input(type='text', name='detailedSubCategoryId')
+    br
+    | promotionType:
+    input(type='text', name='promotionType')
+    br
+    | promotionName:
+    input(type='text', name='promotionName')
+    br
+    | promotionDescription:
+    input(type='text', name='promotionDescription')
+    br
+    | startDate:
+    input(type='text', name='startDate')
+    br
+    | endDate:
+    input(type='text', name='endDate')
+    br
+    | promotionImage:
+    input(type='file', name='promotionImage')
+    br
+    | languageId:
+    input(type='text', name='languageId')
+    br
+    | offerProduct1:
+    input(type='text', name='offerProduct1')
+    br
+    | offerProduct2:
+    input(type='text', name='offerProduct2')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list_promotions(Supplier)
+form(action='/list_promotions_by_supplier', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    | branchId:
+    input(type='text', name='branchId')
+    br
+    | categoryId:
+    input(type='text', name='categoryId')
+    br
+    | promotionType:
+    input(type='text', name='promotionType')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 delete_promotion(Supplier)
+form(action='/delete_promotion_by_supplier', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    | id:
+    input(type='text', name='id')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+h2 Profit And Loss Report
+form(action='/profit_loss_report', method='post')
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='authSectionId')
+    br
+    | startLimit:
+    input(type='text', name='startLimit')
+    br
+    | noOfRecords:
+    input(type='text', name='noOfRecords')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+h2 list_supplier_branch_products(supplier)
+form(action='/list_supplier_branch_products_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | branchId :
+    input(type='text', name='branchId')
+    br
+    | categoryId :
+    input(type='text', name='categoryId')
+    br
+    | subCategoryId :
+    input(type='text', name='subCategoryId')
+    br
+    | detailedSubCategoryId :
+    input(type='text', name='detailedSubCategoryId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 assign_product_to_supplier_branch(supplier)
+form(action='/assign_product_to_supplier_branch_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | supplierId :
+    input(type='text', name='supplierId')
+    br
+    | branchId :
+    input(type='text', name='branchId')
+    br
+    | productId (separated by #):
+    input(type='text', name='productId')
+    br
+    | categoryId (separated by #):
+    input(type='text', name='categoryId')
+    br
+    | subCategoryId (separated by #):
+    input(type='text', name='subCategoryId')
+    br
+    | detailedSubCategoryId (separated by #):
+    input(type='text', name='detailedSubCategoryId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 add supplier branch product(supplier)
+form(action='/add_supplier_branch_product_by_supplier', method='post',enctype="multipart/form-data")
+    | accessToken:
+    input(type='text', name='accessToken')
+    br
+    | sectionId:
+    input(type='text', name='sectionId')
+    br
+    | branchId:
+    input(type='text', name='branchId')
+    br
+    | categoryId:
+    input(type='text', name='categoryId')
+    br
+    | subCategoryId :
+    input(type='text', name='subCategoryId')
+    br
+    | detailedSubCategoryId :
+    input(type='text', name='detailedSubCategoryId')
+    br
+    | name:
+    input(type='text', name='name')
+    br
+    | languageId:
+    input(type='text', name='languageId')
+    br
+    | priceUnit:
+    input(type='text', name='priceUnit')
+    br
+    | description:
+    input(type='text', name='description')
+    br
+    | measuringUnit:
+    input(type='text', name='measuringUnit')
+    br
+    | sku:
+    input(type='text', name='sku')
+    br
+    | barCode:
+    input(type='text', name='barCode')
+    br
+    | count:
+    input(type='text', name='count')
+    br
+    | image:
+    input(type='file', name='image')
+    br
+    | image:
+    input(type='file', name='image')
+    br
+    | commission:
+    input(type='text', name='commission')
+    br
+    | commissionPackage:
+    input(type='text', name='commissionPackage')
+    br
+    | commissionType:
+    input(type='text', name='commissionType')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+h2 delete supplier branch product (supplier)
+form(action='/delete_supplier_branch_product_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | productId :
+    input(type='text', name='productId')
+    br
+    | branchId :
+    input(type='text', name='branchId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list supplier branches (supplier)
+form(action='/list_supplier_branch_names_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | supplierId :
+    input(type='text', name='supplierId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list_branch_areas(supplier)
+form(action='/list_branch_areas_by_supplier', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | branchId :
+    input(type='text', name='branchId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Admin loyalty Order listing
+form(action='/admin_loyalty_order_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Admin Loyalty Order Description
+form(action='/loyalty_order_description', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    |Loyality OrderId :
+    input(type='text', name='orderId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Change Pending Loyalty Order Status by Admin
+form(action='/confirm_pending_loyalty_order_by_admin', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | Loyalty OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(1-Confirmed;2-Reject) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Loyalty Order Shipped(Admin)
+form(action='/loyalty_order_shipped_by_admin', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | Loyalty OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(3-shipped) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Loyalty Order nearby(Admin)
+form(action='/loyalty_order_nearby_by_admin', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | Loyalty OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(4-nearby) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Delivered Loyalty Order(Admin)
+form(action='/loyalty_order_delivered_by_admin', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | Loyalty OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status(5-Delivered) :
+    input(type='text', name='status')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 Tracked Loyalty Order List(Admin)
+form(action='/tracking_loyalty_order_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Tracked Loyalty Order Update(Admin)
+form(action='/update_tracked_loyalty_order', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | auth section id :
+    input(type='text', name='authSectionId')
+    br
+    | OrderId :
+    input(type='text', name='orderId')
+    br
+    | Status:
+    input(type='text', name='status')
+    br
+    | date:
+    input(type='text', name='date')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 products list
+form(action='/product_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+    hr
+h2 supplier products list
+form(action='/supplier_product_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | supplier_id :
+    input(type='text', name='supplier_id')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Multiple Images
+form(action='/multiple_image_upload', method='post')
+    | images:
+    input(type = 'file', name = 'images')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 import product pricing
+form(action='/import_admin_product_pricing', method='post',enctype="multipart/form-data")
+    | path:
+    input(type='file', name='fileName')
+    br
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 supplierBranch products list
+form(action='/branch_product_list', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | branchId :
+    input(type='text', name='branchId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+
+h2 change date
+form(action='/change_date', method='post')
+    | order_id :
+    input(type='text', name='order_id')
+    br
+    | schedule_date :
+    input(type='text', name='schedule_date')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 user Order Details
+form(action='/user_order_details',method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId
+    input(type='text',name='languageId')
+    br
+    | orderId
+    input(type='text',name='orderId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list supplier categories
+form(action='/list_supplier_category', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list supplier sub categories
+form(action='/list_supplier_sub_category', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | categoryId :
+    input(type='text', name='categoryId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list supplier detailed sub categories
+form(action='/list_supplier_detailed_sub_category', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | sectionId :
+    input(type='text', name='sectionId')
+    br
+    | subCategoryId :
+    input(type='text', name='subCategoryId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 supplier_loyalty_level
+form(action='/supplier_loyalty_level', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    input(type='submit',value='submit')
+    br
+    hr

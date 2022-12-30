@@ -1,0 +1,32 @@
+<HTML>
+    <BODY>
+    <FORM ID="frmHtmlCheckout" NAME="frmHtmlCheckout" METHOD="POST"
+    ACTION="https://ecm.firstatlanticcommerce.com/SENTRY/PaymentGateway/Application/DirectAuthLink.aspx">
+    <NOSCRIPT><BR><BR><H1 ALIGN="center">Processing your Transaction</H1><H2 ALIGN="center">
+    JavaScript is currently disabled or is not supported by your browser.</H2><BR><H3 ALIGN="center">
+    Please click on the Submit button to continue processing.</H3><INPUT TYPE="submit" value="Submit"
+    ID="submit" NAME="submit"></NOSCRIPT><INPUT TYPE="hidden" NAME="Version" ID="Version"
+    VALUE="1.0.0"><INPUT TYPE="hidden" NAME="AcqID" ID="AcqID" VALUE="464748"> <INPUT
+    TYPE="hidden" NAME="MerID" ID="MerID" VALUE="33302779"><INPUT TYPE="hidden"
+    NAME="PurchaseAmt" ID="PurchaseAmt" VALUE="000000040100"><INPUT TYPE="hidden"
+    NAME="PurchaseCurrency" ID="PurchaseCurrency" VALUE="320"><INPUT TYPE="hidden"
+    NAME="PurchaseCurrencyExponent" ID="PurchaseCurrencyExponent" VALUE="2"><INPUT TYPE="hidden"
+    NAME="OrderID" ID="OrderID" VALUE="DOIT10452"><INPUT TYPE="hidden" NAME="CardNo" ID="CardNo"
+    VALUE="424242_04XOK4242"><INPUT TYPE="hidden" NAME="CardExpDate" ID="CardExpDate"
+    VALUE="1222"><INPUT TYPE="hidden" NAME="CardCVV2" ID="CardCVV2" VALUE="234"><INPUT
+    TYPE="hidden" NAME="SignatureMethod" ID="SignatureMethod" VALUE="SHA1"><INPUT TYPE="hidden"
+    NAME="Signature" ID="Signature" VALUE="T4p/TCBGJ3oND5Mm729T7r1M/zo="> <INPUT TYPE="hidden"
+    NAME="CaptureFlag" ID="CaptureFlag" VALUE="A"><INPUT TYPE="hidden" NAME="MerRespURL"
+    ID="MerRespURL" VALUE="https://ecm.firstatlanticcommerce.com/TestPages/MerchantCheckout/Parser/HttpRequestParser">
+    <INPUT TYPE="hidden" NAME="CustomData" ID="CustomData" VALUE=""> <INPUT
+    TYPE="hidden" NAME="InterfaceCode" ID="InterfaceCode" VALUE="FACPG2.XML"></FORM><SCRIPT
+    LANGUAGE="JavaScript">
+    Checkout();
+    function Checkout() {
+    
+    document.frmHtmlCheckout.action =
+    "https://ecm.firstatlanticcommerce.com/SENTRY/PaymentGateway/Application/DirectAuthLink.aspx"; document.frmHtmlCheckout.submit();}
+    </SCRIPT>
+    </BODY>
+    
+    </HTML>

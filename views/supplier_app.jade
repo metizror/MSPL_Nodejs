@@ -1,0 +1,265 @@
+h2 check app version
+form(action='/check_app_version', method='post')
+    | deviceType :
+    input(type='text', name='deviceType')
+    br
+    | appVersion :
+    input(type='text', name='appVersion')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 supplier app login
+form(action='/supplier_app_login', method='post')
+    | email :
+    input(type='text', name='email')
+    br
+    | password :
+    input(type='text', name='password')
+    br
+    | deviceToken :
+    input(type='text', name='deviceToken')
+    br
+    | deviceType :
+    input(type='text', name='deviceType')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 access token login
+form(action='/access_token_login', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | deviceToken :
+    input(type='text', name='deviceToken')
+    br
+    | deviceType :
+    input(type='text', name='deviceType')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 order_management
+form(action='/order_management', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 supplier_profile
+form(action='/supplier_profile', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 no_of_orders_delivered
+form(action='/no_of_orders_delivered', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | filter :
+    input(type='text', name='filter')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list_pending_orders
+form(action='/list_pending_orders', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | isUrgent :
+    input(type='text', name='isUrgent')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list_pending_tracking_alerts
+form(action='/list_pending_tracking_alerts', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 list_scheduled_orders_for_tomorrow
+form(action='/list_scheduled_orders_for_tomorrow', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 advertisement_page
+form(action='/advertisement_page', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 accept_order
+form(action='/accept_order', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | orderId :
+    input(type='text', name='orderId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 reject_order
+form(action='/reject_order', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    | orderId :
+    input(type='text', name='orderId')
+    br
+    | rejectionReason :
+    input(type='text', name='rejectionReason')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 request_subscription_renewal
+form(action='/request_subscription_renewal', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 request_commission_change
+form(action='/request_commission_change', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+h2 supplier_logout
+form(action='/supplier_logout', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+
+h2 supplier_forgot_password
+form(action='/supplier_forget_password', method='post')
+    | emailId :
+    input(type='text', name='emailId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 branch_forgot_password
+form(action='/supplier_branch_forget_password', method='post')
+    | emailId :
+    input(type='text', name='emailId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 IOS_supplier_forgot_password
+form(action='/supplier_ios_forget_password', method='post')
+    | emailId :
+    input(type='text', name='emailId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 Ios_branch_forgot_password
+form(action='/supplier_ios_branch_forget_password', method='post')
+    | emailId :
+    input(type='text', name='emailId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+
+h2 supplier revenue
+form(action='/total_supplier_revenue',method='post')
+    | accessToken :
+    input(type='text',name='accessToken')
+    br
+    | flag (1:monthly , 2: yearly )
+    input(type='text',name='flag')
+    br
+    | languageId
+    input(type='text' ,name='languageId')
+    br
+    | month (option if flag =2 )
+    input(type='text',name='month')
+    br
+    | year
+    input(type='text',name='year')
+    br
+    input(type='submit')
+
+
+h2 order_details
+form(action='/order_details', method='post')
+    | accessToken :
+    input(type='text', name='accessToken')
+    br
+    | orderId:
+    input(type='text', name='orderId')
+    br
+    |languageId :
+    input(type='text', name='languageId')
+    br
+    input(type='submit',value='submit')
+    br
+    hr
+

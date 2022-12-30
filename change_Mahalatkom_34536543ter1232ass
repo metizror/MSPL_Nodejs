@@ -1,0 +1,47 @@
+********Mahalatkom***:
+
+isProductCustomTabDescriptionEnable = 1/0  (Boolean)
+productCustomTabDescriptionLabel = [{"uniqueId":1,"labelText":"The Details","labelDBColName":"customTabDescription1","addByAdmin":false},{"uniqueId":2,"labelText":"Size & Fit","labelDBColName":"customTabDescription2","addByAdmin":false},{"uniqueId":3,"labelText":"Shipping & Free Returns","labelDBColName":"customTabDescription3","addByAdmin":true}]
+Note: uniqueId, labelDBColName not changable
+send me uniqueId in supplier. I will save uniqueId in supplier productCustomTabDescriptionLabelSelected: [2] (json stringify)
+
+
+no_add_category  => 1
+no_add_edit_sub_category  => 1
+hide_delivery_radius_vendor  => 1
+
+Note:
+
+Add column in supplier productCustomTabDescriptionLabelSelected.
+Add Column in product of productCustomTabDescriptionLabel -> labelDBColName.
+
+
+
+[{"uniqueId":1,"labelText":"Hello","labelDBColName":"customTabDescription1"},{"uniqueId":2,"labelText":"Hello 2","labelDBColName":"customTabDescription2"}]
+
+
+DB:
+
+1) INSERT INTO `tbl_setting` (`id`, `key`, `for_front_end`, `value`, `deleted_by`, `created_at`, `updated_at`) VALUES (NULL, 'isProductCustomTabDescriptionEnable', '1', '1', '0', '2020-05-11 05:27:24', '2020-05-11 05:27:24');
+2) INSERT INTO `tbl_setting` (`id`, `key`, `for_front_end`, `value`, `deleted_by`, `created_at`, `updated_at`) VALUES (NULL, 'productCustomTabDescriptionLabel', '1', '[{"uniqueId":1,"labelText":"The Details","labelDBColName":"customTabDescription1","addByAdmin":false},{"uniqueId":2,"labelText":"Size & Fit","labelDBColName":"customTabDescription2","addByAdmin":false},{"uniqueId":3,"labelText":"Shipping & Free Returns","labelDBColName":"customTabDescription3","addByAdmin":true}]', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+3) INSERT INTO `tbl_setting` (`id`, `key`, `for_front_end`, `value`, `deleted_by`, `created_at`, `updated_at`) VALUES (NULL, 'no_add_category', '1', '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+4) INSERT INTO `tbl_setting` (`id`, `key`, `for_front_end`, `value`, `deleted_by`, `created_at`, `updated_at`) VALUES (NULL, 'no_add_edit_sub_category', '1', '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+5) INSERT INTO `tbl_setting` (`id`, `key`, `for_front_end`, `value`, `deleted_by`, `created_at`, `updated_at`) VALUES (NULL, 'hide_delivery_radius_vendor', '1', '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+
+3) ALTER TABLE `supplier` ADD `productCustomTabDescriptionLabelSelected` TEXT NULL DEFAULT NULL COMMENT 'productCustomTabDescriptionLabelSelected, store uniqueId' AFTER `base_delivery_charges`;
+4) INSERT INTO `tbl_setting` (`id`, `key`, `for_front_end`, `value`, `deleted_by`, `created_at`, `updated_at`) VALUES (NULL, 'sendSupplierDataInProductFilteration', '1', '1', '0', '2020-05-11 05:27:24', '2020-05-19 10:29:28');
+5) ALTER TABLE `product` ADD `customTabDescription1` LONGTEXT NULL COMMENT 'labelDBColName in productCustomTabDescriptionLabel tbl_setting' AFTER `is_prescribed`, ADD `customTabDescription2` LONGTEXT NULL COMMENT 'labelDBColName in productCustomTabDescriptionLabel tbl_setting' AFTER `customTabDescription1`;
+6) INSERT INTO `tbl_setting` (`id`, `key`, `for_front_end`, `value`, `deleted_by`, `created_at`, `updated_at`) VALUES (NULL, 'sendSupplierDataInProductFilterationApi', '0', '1', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+7) INSERT INTO `tbl_setting` (`id`, `key`, `for_front_end`, `value`, `deleted_by`, `created_at`, `updated_at`) VALUES (NULL, 'selected_template', '1', '2', '0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+8) ALTER TABLE `supplier` ADD `customTabDescription3` LONGTEXT NULL DEFAULT NULL COMMENT 'customTabDescription3, add by admin' AFTER `stripe_account`;
+
+
+note:
+   const settingDataKeys = await func.getSettingDataKeyAndValue(req.dbName, ['isProductCustomTabDescriptionEnable']);
+        settingDataKeys.keyAndValue.isProductCustomTabDescriptionEnable = !!settingDataKeys.keyAndValue.isProductCustomTabDescriptionEnable;
+       if(settingDataKeys.keyAndValue.isProductCustomTabDescriptionEnable === true){
+            let sql = "UPDATE product SET customTabDescription1 =?,customTabDescription2=?,customTabDescription3=? WHERE id = ?;";
+            let params = [customTabDescription1,customTabDescription2,customTabDescription3,productId];
+            await ExecuteQ.Query(req.dbName,sql,params);    
+       }

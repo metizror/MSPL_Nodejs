@@ -1,0 +1,3199 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Clikat">
+<head>
+    <title>Clikat Api</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="clikat.css">
+
+</head>
+<!--ng-app id="ng-app"-->
+<body ng-controller="apiCtrl">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <img src="logo_navbar_white.png" class="logo">
+        </div>
+
+    </div>
+</nav>
+<div class="row top-margin">
+    <div class="col-md-3 col-lg-3  api ">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Home</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse1">
+
+                    <div class="list-group">
+                        <a href="#" class="list-group-item" ng-click="show=1">All Category</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse2">Location</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse2">
+
+                    <div class="list-group">
+                       <a href="#"  class="list-group-item" ng-click="show = 2">All Country List</a>
+                        <a href="#" class="list-group-item" ng-click="show = 3">All City List</a>
+                        <a href="#" class="list-group-item" ng-click="show = 4">All Zone List</a>
+                        <a href="#" class="list-group-item" ng-click="show = 5">All Area List</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse3">Supplier List</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse3">
+
+                    <div class="list-group">
+                        <a href="#"  class="list-group-item" ng-click="show = 6">Supplier List</a>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse4">Supplier Info</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse4">
+
+                    <div class="list-group">
+                        <a href="#"  class="list-group-item" ng-click="show = 7">Supplier Info</a>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse5">Sub Category List</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse5">
+
+                    <div class="list-group">
+                        <a href="#"  class="list-group-item" ng-click="show = 8">Subcategory Listing</a>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse6">Customer Register</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse6">
+
+                    <div class="list-group">
+                        <a href="#"  class="list-group-item" ng-click="show = 9">Customer Register Step First</a>
+                        <a href="#" class="list-group-item" ng-click="show = 10">Customer Register Step Second</a>
+                        <a href="#" class="list-group-item" ng-click="show = 11">Check OTP</a>
+                        <a href="#" class="list-group-item" ng-click="show = 12">Customer Register Step Third</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse7">Customer Login</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse7">
+
+                    <div class="list-group">
+                        <a href="#"  class="list-group-item" ng-click="show = 13">LOGIN</a>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionTwo" href="#collapse8">Customer Address</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse8">
+
+                    <div class="list-group">
+                        <a href="#"  class="list-group-item" ng-click="show = 14">Customer Add New Address</a>
+                        <a href="#" class="list-group-item" ng-click="show = 15">Get All  Customer Address</a>
+                        <a href="#" class="list-group-item" ng-click="show = 16">Delete Customer Address</a>
+                        <a href="#" class="list-group-item" ng-click="show = 17">Edit Address</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionTwo" href="#collapse9">Products</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse9">
+
+                    <div class="list-group">
+                        <a href="#"  class="list-group-item" ng-click="show = 18">Get Products</a>
+                        <a href="#"  class="list-group-item" ng-click="show = 19">Get Product Details</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionTwo" href="#collapse10">Cart</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse10">
+
+                    <div class="list-group">
+                        <a href="#"  class="list-group-item" ng-click="show = 20">Add To Cart</a>
+                        <a href="#"  class="list-group-item" ng-click="show = 21">Update Cart Info</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse11">Image Resize</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse11">
+
+                    <div class="list-group">
+                        <a href="#"  class="list-group-item" ng-click="show = 22">Image Resize</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-5 col-lg-5 info " >
+
+        <div class="panel panel-default" ng-if="show==1">
+            <div class="panel-heading"> /get_all_category(POST)</div>
+        <div class="data" >
+
+
+            <form action="/get_all_category" method="post" >
+
+                <button type="button" ng-click="allCategory()" class="button">Submit</button>
+                <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+            </form>
+
+
+        </div>
+            </div>
+        <div class="panel panel-default" ng-if="show==1">
+
+            <div class="panel-heading">Description
+                             <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+
+            </div>
+
+  <div id="demo" class="collapse data">
+   None
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used to  get all category listing
+</p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+       <th ><div>Param</div></th>
+        <th ><div><span>Type</span></div></th>
+        <th ><div><span>Description</span></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td>No Parameter</td></tr>
+    </tbody>
+  </table>
+</div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+
+
+
+        <th class="rotate-45"><div>status</div></th>
+        <th class="rotate-45"><div><span>Response</span></div></th>
+
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td class="row-header">200</td>
+        <td>Success</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">400</td>
+        <td>Error</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">401</td>
+        <td>Error of invalid access token</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">500</td>
+        <td>Something went wrong error</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+                </div>
+            </div>
+
+
+
+        <div  ng-if="show==2">
+            <div class="panel panel-default" >
+                <div class="panel-heading"> /get_all_country(POST)
+</div>
+
+                <div class="data" >
+
+
+                    <form action="/get_all_country" method="post" >
+
+
+                        <div class="form-group">
+                        <label>LanguageId * :</label>
+                        <input type="text"  class="form-control" ng-model="country.languageId" /><br/>
+                        </div>
+                        <button type="button" ng-click="allCountry()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==2">
+            <div class="panel-heading">Description
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+
+            </div>
+
+  <div id="demo" class="collapse data">
+    English : languageId :14 , 
+    Arabic : languageId :15
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used to  get all country listing according to language id
+</p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+       <th ><div>Param</div></th>
+        <th ><div><span>Type</span></div></th>
+        <th ><div><span>Description</span></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <tr>
+        <td class="row-header">languageId</td>
+        <td>number</td>
+        <td>
+Send language id get from <b>get_all_category api</b>
+ </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+
+
+
+        <th class="rotate-45"><div>status</div></th>
+        <th class="rotate-45"><div><span>Response</span></div></th>
+
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td class="row-header">200</td>
+        <td>Success</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">400</td>
+        <td>Error</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">401</td>
+        <td>Error of invalid access token</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">500</td>
+        <td>Something went wrong error</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+            </div>
+        </div>
+
+        <div ng-if="show==3">
+            <div class="panel panel-default" >
+                <div class="panel-heading">/get_all_city(POST)
+</div>
+                <div class="data" >
+
+
+                    <form action="/get_all_city" method="post" >
+
+
+                        <div class="form-group">
+                            <label>LanguageId * :</label>
+                            <input type="text" name="" class="form-control" ng-model="city.languageId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>CountryId * :</label>
+                            <input type="text" name="" class="form-control" ng-model="city.countryId" /><br/>
+                        </div>
+                        <button type="button" ng-click="allCity()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==3">
+            <div class="panel-heading">Description
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+
+
+            </div>
+
+  <div id="demo" class="collapse data">
+    English : languageId :14 , 
+    Arabic : languageId :15
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p> This api is used to  get all city listing according to country and language id base
+</p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+       <th ><div>Param</div></th>
+        <th ><div><span>Type</span></div></th>
+        <th ><div><span>Description</span></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <tr>
+        <td class="row-header">languageId</td>
+        <td>number</td>
+        <td>Send language id get from <b>get_all_category api
+</b> </td>
+
+      </tr>
+      <tr>
+        <td class="row-header">countryId</td>
+        <td>number</td>
+        <td>Send country id get from <b>get_all_country api
+</b></td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                 <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+
+
+
+        <th class="rotate-45"><div>status</div></th>
+        <th class="rotate-45"><div><span>Response</span></div></th>
+
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td class="row-header">200</td>
+        <td>Success</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">400</td>
+        <td>Error</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">401</td>
+        <td>Error of invalid access token</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">500</td>
+        <td>Something went wrong error</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+            </div>
+        </div>
+
+        <div  ng-if="show==4">
+            <div class="panel panel-default" >
+                <div class="panel-heading">/get_all_zone(POST)
+</div>
+                <div class="data" >
+
+
+                    <form action="/get_all_city" method="post" >
+
+
+                        <div class="form-group">
+                            <label>LanguageId *:</label>
+                            <input type="text"  class="form-control" ng-model="zone.languageId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>CityId * :</label>
+                            <input type="text"  class="form-control" ng-model="zone.cityId" /><br/>
+                        </div>
+                        <button type="button" ng-click="allZone()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==4">
+            <div class="panel-heading">Description
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+            </div>
+
+  <div id="demo" class="collapse data">
+     English : languageId :14 , 
+    Arabic : languageId :15
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p> This api is used to  get all zone listing according to city and language id base
+</p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                 <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+       <th ><div>Param</div></th>
+        <th ><div><span>Type</span></div></th>
+        <th ><div><span>Description</span></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <tr>
+        <td class="row-header">languageId</td>
+        <td>number</td>
+        <td>Send language id get from <b>get_all_category api
+</b> </td>
+
+      </tr>
+      <tr>
+        <td class="row-header">cityId</td>
+        <td>number</td>
+        <td>Send city id get from <b>get_all_city api
+</b> </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+
+
+
+        <th class="rotate-45"><div>status</div></th>
+        <th class="rotate-45"><div><span>Response</span></div></th>
+
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td class="row-header">200</td>
+        <td>Success</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">400</td>
+        <td>Error</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">401</td>
+        <td>Error of invalid access token</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">500</td>
+        <td>Something went wrong error</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+            </div>
+        </div>
+
+        <div  ng-if="show==5">
+            <div class="panel panel-default" >
+                <div class="panel-heading"> /get_all_area(POST)
+</div>
+                <div class="data" >
+
+
+                    <form action="/get_all_area" method="post" >
+
+
+                        <div class="form-group">
+                            <label>LanguageId * :</label>
+                            <input type="text"  class="form-control" ng-model="area.languageId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>ZoneId *:</label>
+                            <input type="text"  class="form-control" ng-model="area.zoneId" /><br/>
+                        </div>
+                        <button type="button" ng-click="allArea()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==5">
+            <div class="panel-heading">Description
+
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+            </div>
+
+  <div id="demo" class="collapse data">
+    English : languageId :14 , 
+    Arabic : languageId :15
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used to  get all area listing according to zone and language id base
+</p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+       <th ><div>Param</div></th>
+        <th ><div><span>Type</span></div></th>
+        <th ><div><span>Description</span></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <tr>
+        <td class="row-header">languageId</td>
+        <td>number</td>
+        <td>Send language id get from <b>get_all_category api</b></td>
+
+      </tr>
+      <tr>
+        <td class="row-header">zoneId</td>
+        <td>number</td>
+        <td>Send zone id get from <b>get_all_zone api
+</b></td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+
+
+
+        <th class="rotate-45"><div>status</div></th>
+        <th class="rotate-45"><div><span>Response</span></div></th>
+
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td class="row-header">200</td>
+        <td>Success</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">400</td>
+        <td>Error</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">401</td>
+        <td>Error of invalid access token</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">500</td>
+        <td>Something went wrong error</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+            </div>
+        </div>
+
+        <div  ng-if="show==6">
+            <div class="panel panel-default" >
+                <div class="panel-heading"> /get_supplier_list(POST)</div>
+                <div class="data" >
+
+
+                    <form action="/get_supplier_list" method="post" >
+
+
+                        <div class="form-group">
+                            <label>LanguageId *:</label>
+                            <input type="text"  class="form-control" ng-model="supplierList.languageId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>AreaId *:</label>
+                            <input type="text"  class="form-control" ng-model="supplierList.areaId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>CategoryId *:</label>
+                            <input type="text"  class="form-control" ng-model="supplierList.categoryId" /><br/>
+                        </div>
+                        <button type="button" ng-click="supplierList()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==6">
+            <div class="panel-heading">Description
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+
+            </div>
+
+  <div id="demo" class="collapse data">
+  id : supplierId <br>
+    Status :- 0: available, 1:busy , 2:closed <br>
+    payment_method:  0 : cash on delivery , 1: card , 2: both <br>
+      commission_package: 0 : gold, 1: silver, 2: platinum
+
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>get supplier list according to area id , language id and category based
+</p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+               <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+       <th ><div>Param</div></th>
+        <th ><div><span>Type</span></div></th>
+        <th ><div><span>Description</span></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <tr>
+        <td class="row-header">languageId</td>
+        <td>number</td>
+        <td>Send language id get from <b>get_all_category api
+</b></td>
+
+      </tr>
+      <tr>
+        <td class="row-header">areaId</td>
+        <td>number</td>
+        <td>Send zone id get from <b>Get_all_area api
+</b> </td>
+
+      </tr>
+      <tr>
+        <td class="row-header">categoryId</td>
+        <td>number</td>
+        <td>Send category id get from <b>get_all_category api
+</b> </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                  <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+
+
+
+        <th class="rotate-45"><div>status</div></th>
+        <th class="rotate-45"><div><span>Response</span></div></th>
+
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td class="row-header">200</td>
+        <td>Success</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">400</td>
+        <td>Error</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">401</td>
+        <td>Error of invalid access token</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">500</td>
+        <td>Something went wrong error</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+            </div>
+        </div>
+
+        <div  ng-if="show==7">
+            <div class="panel panel-default" >
+                <div class="panel-heading">/supplier_details(POST)
+</div>
+                <div class="data" >
+
+
+                    <form action="/supplier_details" method="post" >
+
+
+                        <div class="form-group">
+                            <label>LanguageId *:</label>
+                            <input type="text"  class="form-control" ng-model="supplierInfo.languageId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>SupplierId *:</label>
+                            <input type="text"  class="form-control" ng-model="supplierInfo.supplierId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>BranchId *:</label>
+                            <input type="text"  class="form-control" ng-model="supplierInfo.branchId" /><br/>
+                        </div>
+                        <button type="button" ng-click="supplierDetails()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==7">
+            <div class="panel-heading">Description
+
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+
+
+
+            </div>
+
+  <div id="demo" class="collapse data">
+  status: 0: available, 1:busy , 2:closed <br>
+  urgent_type:     0: value ,1 : percentage  <br>
+  is_urgent:1 :yes , 0 : no  <br>
+  payment_method:  0 : cash on delivery , 1: card , 2: both <br>
+
+ 
+
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used to  get supplier info by supplier id
+</p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+               <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+       <th ><div>Param</div></th>
+        <th ><div><span>Type</span></div></th>
+        <th ><div><span>Description</span></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <tr>
+        <td class="row-header">supplierId</td>
+        <td>number</td>
+        <td>Send supplier id get from <b>get_supplier_list api
+</b> </td>
+        
+      </tr>
+      <tr>
+        <td class="row-header">branchId</td>
+        <td>number</td>
+        <td>Send branch id get from <b>/get_supplier_list
+</b> </td>
+        
+      </tr>
+      <tr>
+        <td class="row-header">languageId</td>
+        <td>number</td>
+        <td>Send language id get from <b>/get_all_category api
+</b> </td>
+        
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+         
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                 <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+       
+  
+      
+        <th class="rotate-45"><div>status</div></th>
+        <th class="rotate-45"><div><span>Response</span></div></th>
+        
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td class="row-header">200</td>
+        <td>Success</td>
+        
+      </tr>
+      <tr>
+        <td class="row-header">400</td>
+        <td>Error</td>
+        
+      </tr>
+      <tr>
+        <td class="row-header">401</td>
+        <td>Error of invalid access token</td>
+        
+      </tr>
+      <tr>
+        <td class="row-header">500</td>
+        <td>Something went wrong error</td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
+            </div>
+        </div>
+
+        <div  ng-if="show==8">
+            <div class="panel panel-default" >
+                <div class="panel-heading"> /subcategory_listing(POST)
+</div>
+                <div class="data" >
+
+
+                    <form action="/subcategory_listing" method="post" >
+
+
+                        <div class="form-group">
+                            <label>LanguageId *:</label>
+                            <input type="text"  class="form-control" ng-model="subcategoryList.languageId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>SupplierId *:</label>
+                            <input type="text"  class="form-control" ng-model="subcategoryList.supplierId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>categoryId *:</label>
+                            <input type="text" class="form-control" ng-model="subcategoryList.categoryId" /><br/>
+                        </div>
+                        <button type="button" ng-click="subcategoryListing()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==8">
+            <div class="panel-heading">Description
+
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+
+
+            </div>
+
+  <div id="demo" class="collapse data">
+   None
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used to  get subcategory according to category and as well as this is use for show subcategory according to supplier id
+</p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+       <th ><div>Param</div></th>
+        <th ><div><span>Type</span></div></th>
+        <th ><div><span>Description</span></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <tr>
+        <td class="row-header">supplierId</td>
+        <td>number</td>
+        <td>Send supplier id get from <b>get_supplier_list api</b> </td>
+
+      </tr>
+      <tr>
+        <td class="row-header">categoryId</td>
+        <td>number</td>
+        <td>
+Send language id get from <b> get_all_category api </b>
+</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">languageId</td>
+        <td>number</td>
+        <td>
+Send language id get from <b> /get_all_category api </b>
+
+</b> </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                 <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+
+
+
+        <th class="rotate-45"><div>status</div></th>
+        <th class="rotate-45"><div><span>Response</span></div></th>
+
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td class="row-header">200</td>
+        <td>Success</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">400</td>
+        <td>Error</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">401</td>
+        <td>Error of invalid access token</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">500</td>
+        <td>Something went wrong error</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+            </div>
+        </div>
+
+    <div  ng-if="show==9">
+        <div class="panel panel-default" >
+            <div class="panel-heading"> /customer_register_step_first(POST)
+</div>
+            <div class="data" >
+
+
+                <form action="/customer_register_step_first" method="post" >
+
+
+                    <div class="form-group">
+                        <label>Email * :</label>
+                        <input type="text"  class="form-control" ng-model="stepFirst.email" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <label>Device Token *:</label>
+                        <input type="text"  class="form-control" ng-model="stepFirst.deviceToken" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <label>Device Type *:</label>
+                        <input type="text" class="form-control" ng-model="stepFirst.deviceType" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <label>Latitude *:</label>
+                        <input type="text"  class="form-control" ng-model="stepFirst.latitude" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <label>Password *:</label>
+                        <input type="password" class="form-control" ng-model="stepFirst.password" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <label>Area Id *:</label>
+                        <input type="text"  class="form-control" ng-model="stepFirst.areaId" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <label> Longitude *:</label>
+                        <input type="text" class="form-control" ng-model="stepFirst.longitude" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <label>Language Id *:</label>
+                        <input type="text"  class="form-control" ng-model="stepFirst.languageId" /><br/>
+                    </div>
+                    <button type="button" ng-click="customerRegisterStepFirst()" class="button">Submit</button>
+                    <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                </form>
+                <hr>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default" ng-if="show==9">
+        <div class="panel-heading">Description
+ <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+
+
+        </div>
+
+  <div id="demo" class="collapse data">
+  DeviceType  number  1 : IOS 0 : Andriod  <br>
+  </div>
+        <div class="data" >
+            <h3>Summary</h3>
+            <p>  This api is used to sign up first step customer
+</p>
+            <br>
+            <hr>
+            <h3>Parameters</h3>
+            <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+       <th ><div>Param</div></th>
+        <th ><div><span>Type</span></div></th>
+        <th ><div><span>Description</span></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <tr>
+        <td class="row-header">Email</td>
+        <td>string</td>
+        <td>
+User email id
+ </td>
+
+      </tr>
+      <tr>
+        <td class="row-header">deviceToken</td>
+        <td>string</td>
+        <td>
+
+User mobile device token
+ </b>
+</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">deviceType</td>
+        <td>number</td>
+        <td>
+1 : IOS
+0 : Andriod </b>
+
+</b> </td>
+
+      </tr>
+      <tr>
+        <td class="row-header">latitude</td>
+        <td>float</td>
+        <td>
+
+Location latitude
+
+ </b>
+</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">password</td>
+        <td>string</td>
+        <td>
+password
+ </b>
+</td>
+
+      </tr>
+       <tr>
+        <td class="row-header">areaId</td>
+        <td>string</td>
+        <td>
+
+Send Area id get from <b>
+Get_all_area api</b>
+
+ </b>
+</td>
+
+      </tr>
+       <tr>
+        <td class="row-header">longitude</td>
+        <td>float</td>
+        <td>
+
+Location longitude
+
+ </b>
+</td>
+
+      </tr>
+       <tr>
+        <td class="row-header">languageId</td>
+        <td>number</td>
+        <td>
+
+Send language id get from <b> /get_all_category </b> api
+
+ </b>
+</td>
+
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+            <br>
+            <hr>
+            <h3>Responses</h3>
+            <div class="scrollable-table">
+  <table class="table ">
+    <thead>
+      <tr>
+
+
+
+        <th class="rotate-45"><div>status</div></th>
+        <th class="rotate-45"><div><span>Response</span></div></th>
+
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td class="row-header">200</td>
+        <td>Success</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">400</td>
+        <td>Error</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">401</td>
+        <td>Error of invalid access token</td>
+
+      </tr>
+      <tr>
+        <td class="row-header">500</td>
+        <td>Something went wrong error</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+        </div>
+    </div>
+
+
+    <div  ng-if="show==10">
+        <div class="panel panel-default" >
+            <div class="panel-heading">customer_register_step_second(post)</div>
+            <div class="data" >
+
+
+                <form action="/customer_register_step_second" method="post" >
+
+
+                    <div class="form-group">
+                        <label>Access Token *:</label>
+                        <input type="text" name="password" class="form-control" ng-model="stepSecond.accessToken" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <label>Country Code *:</label>
+                        <input type="text" name="text" class="form-control" ng-model="stepSecond.countryCode" /><br/>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number *:</label>
+                        <input type="text" name="password" class="form-control" ng-model="stepSecond.mobileNumber" /><br/>
+                    </div>
+                    <button type="button" ng-click="customerRegisterStepSecond()" class="button">Submit</button>
+                    <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                </form>
+                <hr>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default" ng-if="show==10">
+        <div class="panel-heading">Description
+
+             <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+ 
+        </div>
+         <div id="demo" class="collapse data">
+    None
+  </div>
+        <div class="data" >
+            <h3>Summary</h3>
+            <p>This api is used to sign up second step customer ,register mobile number and send otp and send otp on user mobile
+
+            </p>
+            <br>
+            <hr>
+            <h3>Parameters</h3>
+            <div class="scrollable-table">
+                <table class="table ">
+                    <thead>
+                    <tr>
+                        <th ><div>Param</div></th>
+                        <th ><div><span>Type</span></div></th>
+                        <th ><div><span>Description</span></div></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <tr>
+                        <td class="row-header">accessToken</td>
+                        <td>string</td>
+                        <td>Send access token get from
+<b> customer_register_step_first </b> </td>
+
+                    </tr>
+                    <tr>
+                        <td class="row-header">countryCode</td>
+                        <td>string</td>
+                        <td>Country code </td>
+
+                    </tr>
+                    <tr>
+                        <td class="row-header">mobileNumber</td>
+                        <td>number</td>
+                        <td>
+Mobile number
+ </td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <hr>
+            <h3>Responses</h3>
+            <div class="scrollable-table">
+                <table class="table ">
+                    <thead>
+                    <tr>
+
+
+
+                        <th class="rotate-45"><div>status</div></th>
+                        <th class="rotate-45"><div><span>Response</span></div></th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="row-header">200</td>
+                        <td>Success</td>
+
+                    </tr>
+                    <tr>
+                        <td class="row-header">400</td>
+                        <td>Error</td>
+
+                    </tr>
+                    <tr>
+                        <td class="row-header">401</td>
+                        <td>Error of invalid access token</td>
+
+                    </tr>
+                    <tr>
+                        <td class="row-header">500</td>
+                        <td>Something went wrong error</td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+        <div  ng-if="show==11">
+            <div class="panel panel-default" >
+                <div class="panel-heading"> /check_otp(post)
+</div>
+                <div class="data" >
+
+
+                    <form action="/check_otp" method="post" >
+
+
+                        <div class="form-group">
+                            <label>Access Token *:</label>
+                            <input type="text" name="password" class="form-control" ng-model="checkOtp.accessToken" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Otp :</label>
+                            <input type="text" name="text" class="form-control" ng-model="checkOtp.otp" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Language Id *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="checkOtp.languageId" /><br/>
+                        </div>
+                        <button type="button" ng-click="checkOtp()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==11">
+            <div class="panel-heading">Description<
+
+
+             <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+ 
+        </div>
+         <div id="demo" class="collapse data">
+    None
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p> This api is used to verify otp sign up time
+
+                </p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th ><div>Param</div></th>
+                            <th ><div><span>Type</span></div></th>
+                            <th ><div><span>Description</span></div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td class="row-header">accessToken</td>
+                            <td>string</td>
+                            <td>
+Send access token get from
+<b>customer_register_step_first </b>
+ </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">otp</td>
+                            <td>number</td>
+                            <td>User enter otp </td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+
+
+
+                            <th class="rotate-45"><div>status</div></th>
+                            <th class="rotate-45"><div><span>Response</span></div></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="row-header">200</td>
+                            <td>Success</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">400</td>
+                            <td>Error</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">401</td>
+                            <td>Error of invalid access token</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">500</td>
+                            <td>Something went wrong error</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div  ng-if="show==12">
+            <div class="panel panel-default" >
+                <div class="panel-heading">/customer_register_step_third(post)(Please Use jade File to use this functionality</div>
+                <div class="data" >
+
+
+                    <form action="/customer_register_step_third" method="post" enctype="multipart/form-data">
+
+
+                        <div class="form-group">
+                            <label>Access Token *:</label>
+                            <input type="text" class="form-control" ng-model="stepThird.accessToken" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Name *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="stepThird.name" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Profile Pic :</label>
+                            <input type="file" class="form-control"  accept="image/*" ng-model="stepThird.profilePic" onchange="angular.element(this).scope().file_to_upload_for_image(this.files)"
+                                   nv-file-select=""
+                                   uploader="uploader" /><br/>
+                        </div>
+                        <button type="button" ng-click="customerRegisterStepThird()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==12">
+            <div class="panel-heading">Description
+
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+ 
+
+            </div>
+             <div id="demo" class="collapse data">
+      None
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used to upload user profile pic and user name ,
+
+                </p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th ><div>Param</div></th>
+                            <th ><div><span>Type</span></div></th>
+                            <th ><div><span>Description</span></div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td class="row-header">accessToken</td>
+                            <td>string</td>
+                            <td>
+Send access token get from
+<b>customer_register_step_first</b>
+</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">name</td>
+                            <td>string</td>
+                            <td>User input name </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">profilePic</td>
+                            <td>
+file(optional)
+</td>
+                            <td>
+User upload image
+ </td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+
+
+
+                            <th class="rotate-45"><div>status</div></th>
+                            <th class="rotate-45"><div><span>Response</span></div></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="row-header">200</td>
+                            <td>Success</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">400</td>
+                            <td>Error</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">401</td>
+                            <td>Error of invalid access token</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">500</td>
+                            <td>Something went wrong error</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div  ng-if="show==13">
+            <div class="panel panel-default" >
+                <div class="panel-heading">  /login (POST)
+</div>
+                <div class="data" >
+
+
+                    <form action="/login" method="post" >
+
+
+                        <div class="form-group">
+                            <label>Email *:</label>
+                            <input type="text" class="form-control" ng-model="logIn.email" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Password *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="logIn.password" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Device Token *:</label>
+                            <input type="text" class="form-control" ng-model="logIn.deviceToken" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Device Type *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="logIn.deviceType" /><br/>
+                        </div>
+                        
+
+                        <button type="button" ng-click="logIn()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==13">
+            <div class="panel-heading">Description
+
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+  
+            </div>
+            <div id="demo" class="collapse data">
+
+Device Type : 1 : IOS  , 0 : Andriod 
+
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used for login customer
+
+                </p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th ><div>Param</div></th>
+                            <th ><div><span>Type</span></div></th>
+                            <th ><div><span>Description</span></div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td class="row-header">email</td>
+                            <td>string</td>
+                            <td>Send user enter email id</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">password</td>
+                            <td>string</td>
+                            <td>
+Send user enter password
+</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">deviceToken</td>
+                            <td>string</td>
+                            <td>Send mobile device id </td>
+
+                        </tr>
+                          <tr>
+                            <td class="row-header">deviceType</td>
+                            <td>number</td>
+                            <td>1 : IOS
+0 : Andriod </td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+
+
+
+                            <th class="rotate-45"><div>status</div></th>
+                            <th class="rotate-45"><div><span>Response</span></div></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="row-header">200</td>
+                            <td>Success</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">400</td>
+                            <td>Error</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">401</td>
+                            <td>Error of invalid access token</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">500</td>
+                            <td>Something went wrong error</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div  ng-if="show==14">
+            <div class="panel panel-default" >
+                <div class="panel-heading">/add_new_address(POST)
+</div>
+                <div class="data" >
+
+
+                    <form action="/customer_add_new_address" method="post" >
+
+
+                        <div class="form-group">
+                            <label>LandMark *:</label>
+                            <input type="text" class="form-control" ng-model="customerAddNewAddress.landmark" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Area Id *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="customerAddNewAddress.areaId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Pincode *:</label>
+                            <input type="text" class="form-control" ng-model="customerAddNewAddress.pincode" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Address Line Second *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="customerAddNewAddress.addressLineSecond" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Address Line First *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="customerAddNewAddress.addressLineFirst" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Access token *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="customerAddNewAddress.accessToken" /><br/>
+                        </div>
+
+                        <button type="button" ng-click="customerAddNewAddress()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==14">
+            <div class="panel-heading">Description
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+ 
+
+            </div>
+             <div id="demo" class="collapse data">
+    Error not loading(404)
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used for add new address
+                </p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th ><div>Param</div></th>
+                            <th ><div><span>Type</span></div></th>
+                            <th ><div><span>Description</span></div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td class="row-header">landmark</td>
+                            <td>string</td>
+                            <td>User Enter </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">areaId</td>
+                            <td>number</td>
+                            <td>
+Send area id get from <b> Get_all_area api</b>
+ </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">pincode</td>
+                            <td>string</td>
+                            <td>User Enter </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">addressLineSecond</td>
+                            <td>string</td>
+                            <td>User Enter address</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">addressLineFirst</td>
+                            <td>string</td>
+                            <td>User Enter address</td>
+
+                        </tr>
+                         <tr>
+                            <td class="row-header">accessToken</td>
+                            <td>string</td>
+                            <td>Get access token user login time</td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+
+
+
+                            <th class="rotate-45"><div>status</div></th>
+                            <th class="rotate-45"><div><span>Response</span></div></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="row-header">200</td>
+                            <td>Success</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">400</td>
+                            <td>Error</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">401</td>
+                            <td>Error of invalid access token</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">500</td>
+                            <td>Something went wrong error</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div  ng-if="show==15">
+            <div class="panel panel-default" >
+                <div class="panel-heading">/get_all_customer_address(POST)
+</div>
+                <div class="data" >
+
+
+                    <form action="/get_all_customer_address" method="post" >
+
+
+
+                        <div class="form-group">
+                            <label>Access token :</label>
+                            <input type="text" name="text" class="form-control" ng-model="allCustomerAddress.accessToken" /><br/>
+                        </div>
+
+                        <button type="button" ng-click="allCustomerAddress()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==15">
+            <div class="panel-heading">Description
+
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+  
+            </div>
+            <div id="demo" class="collapse data">
+    None
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used for get all customer register address
+
+
+                </p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th ><div>Param</div></th>
+                            <th ><div><span>Type</span></div></th>
+                            <th ><div><span>Description</span></div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td class="row-header">accessToken</td>
+                            <td>number</td>
+                            <td>Get access token user login time</td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+
+
+
+                            <th class="rotate-45"><div>status</div></th>
+                            <th class="rotate-45"><div><span>Response</span></div></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="row-header">200</td>
+                            <td>Success</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">400</td>
+                            <td>Error</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">401</td>
+                            <td>Error of invalid access token</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">500</td>
+                            <td>Something went wrong error</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div  ng-if="show==16">
+            <div class="panel panel-default" >
+                <div class="panel-heading">/delete_customer_address(POST)
+    </div>
+                <div class="data" >
+
+
+                    <form action="/delete_customer_address" method="post" >
+
+
+
+                        <div class="form-group">
+                            <label>Access token *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="deleteCustomerAddress.accessToken" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Address Id *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="deleteCustomerAddress.addressId" /><br/>
+                        </div>
+
+                        <button type="button" ng-click="deleteCustomerAddress()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==16">
+            <div class="panel-heading">Description
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+  
+            </div>
+            <div id="demo" class="collapse data">
+   None
+  </div>
+
+            <div class="data" >
+                <h3>Summary</h3>
+                <p> This api is used for delete customer register address according to address id
+
+                </p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th ><div>Param</div></th>
+                            <th ><div><span>Type</span></div></th>
+                            <th ><div><span>Description</span></div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td class="row-header">accessToken</td>
+                            <td>number</td>
+                            <td>Get access token user login time</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">addressId</td>
+                            <td>number</td>
+                            <td>Get address id from <b>get_all_customer_address api
+</b> </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+
+
+
+                            <th class="rotate-45"><div>status</div></th>
+                            <th class="rotate-45"><div><span>Response</span></div></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="row-header">200</td>
+                            <td>Success</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">400</td>
+                            <td>Error</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">401</td>
+                            <td>Error of invalid access token</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">500</td>
+                            <td>Something went wrong error</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div  ng-if="show==17">
+            <div class="panel panel-default" >
+                <div class="panel-heading">/edit_address
+</div>
+                <div class="data" >
+
+
+                    <form action="/edit_address" method="post" >
+
+
+                        <div class="form-group">
+                            <label>LandMark *:</label>
+                            <input type="text" class="form-control" ng-model="editAddress.landmark" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Area Id *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="editAddress.areaId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Address Id *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="editAddress.addressId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Pincode *:</label>
+                            <input type="text" class="form-control" ng-model="editAddress.pincode" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Address Line Second *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="editAddress.addressLineSecond" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Address Line First *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="editAddress.addressLineFirst" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Access token *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="editAddress.accessToken" /><br/>
+                        </div>
+
+                        <button type="button" ng-click="editAddress()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==17">
+            <div class="panel-heading">Description
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+ 
+
+
+            </div>
+             <div id="demo" class="collapse data">
+   None
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used for edit customer address
+
+                </p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th ><div>Param</div></th>
+                            <th ><div><span>Type</span></div></th>
+                            <th ><div><span>Description</span></div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td class="row-header">addressId</td>
+                            <td>number</td>
+                            <td>
+Get id from
+<b>/get_all_customer_address </b>
+ </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">addressLineFirst</td>
+                            <td>string</td>
+                            <td> USer Enter</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">pincode</td>
+                            <td>number</td>
+                            <td>User Enter </td>
+
+                        </tr>
+                         <tr>
+                            <td class="row-header">areaId</td>
+                            <td>number</td>
+                            <td>Send area id get from <b>Get_all_area api </b>
+</td>
+
+                        </tr>
+                         <tr>
+                            <td class="row-header">accessToken</td>
+                            <td>string</td>
+                            <td>
+Get user login time
+</td>
+
+                        </tr>
+                         <tr>
+                            <td class="row-header">landmark</td>
+                            <td>string</td>
+                            <td>User Enter </td>
+
+                        </tr>
+                         <tr>
+                            <td class="row-header">addressLineSecond</td>
+                            <td>string</td>
+                            <td>User Enter </td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+
+
+
+                            <th class="rotate-45"><div>status</div></th>
+                            <th class="rotate-45"><div><span>Response</span></div></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="row-header">200</td>
+                            <td>Success</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">400</td>
+                            <td>Error</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">401</td>
+                            <td>Error of invalid access token</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">500</td>
+                            <td>Something went wrong error</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div  ng-if="show==18">
+            <div class="panel panel-default" >
+                <div class="panel-heading">/get_products
+</div>
+                <div class="data" >
+
+
+                    <form action="/get_products" method="post" >
+
+
+
+                        <div class="form-group">
+                            <label>Supplier Branch Id *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="getProducts.supplierBranchId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Language Id *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="getProducts.languageId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Country Id *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="getProducts.countryId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Sub Category Id *:</label>
+                            <input type="text" name="text" class="form-control" ng-model="getProducts.subCategoryId" /><br/>
+                        </div>
+
+                        <button type="button" ng-click="getProducts()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==18">
+            <div class="panel-heading">Description
+
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+ 
+            </div>
+             <div id="demo" class="collapse data">
+   None
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used for get product according to sub category as well as details sub category
+
+                </p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th ><div>Param</div></th>
+                            <th ><div><span>Type</span></div></th>
+                            <th ><div><span>Description</span></div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td class="row-header">supplierBranchId</td>
+                            <td>number</td>
+                            <td>
+Send <b> /get_supplier_list api </b>
+</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">languageId</td>
+                            <td>number</td>
+                            <td>
+Send language id get from <b>get_all_category api </b>
+</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">categoryId</td>
+                            <td>number</td>
+                            <td>Send country id get from <b>get_all_country </b> api</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">subCategoryId</td>
+                            <td>number</td>
+                            <td>
+Get from <b> /subcategory_listing </b> api
+</td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+
+
+
+                            <th class="rotate-45"><div>status</div></th>
+                            <th class="rotate-45"><div><span>Response</span></div></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="row-header">200</td>
+                            <td>Success</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">400</td>
+                            <td>Error</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">401</td>
+                            <td>Error of invalid access token</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">500</td>
+                            <td>Something went wrong error</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div  ng-if="show==19">
+            <div class="panel panel-default" >
+                <div class="panel-heading">/get_product_details
+</div>
+                <div class="data" >
+
+
+                    <form action="/get_product_details" method="post" >
+
+
+
+                        <div class="form-group">
+                            <label>Access Token *:</label>
+                            <input type="text"  class="form-control" ng-model="getProductDetails.accessToken" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Language Id *:</label>
+                            <input type="text"  class="form-control" ng-model="getProductDetails.languageId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Product Id *:</label>
+                            <input type="text"  class="form-control" ng-model="getProductDetails.productId" /><br/>
+                        </div>
+
+                        <button type="button" ng-click="getProductDetails()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==19">
+            <div class="panel-heading">Description
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+ 
+
+            </div>
+             <div id="demo" class="collapse data">
+  None
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used for get product detail
+
+                </p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th ><div>Param</div></th>
+                            <th ><div><span>Type</span></div></th>
+                            <th ><div><span>Description</span></div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td class="row-header">accessToken</td>
+                            <td>string</td>
+                            <td>Get access token user login time </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">productId</td>
+                            <td>number</td>
+                            <td>Get product id from <b> /get_products api </b></td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">languageId</td>
+                            <td>number</td>
+                            <td>
+Send language id get from <b>get_all_category api </b>
+ </td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+
+
+
+                            <th class="rotate-45"><div>status</div></th>
+                            <th class="rotate-45"><div><span>Response</span></div></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="row-header">200</td>
+                            <td>Success</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">400</td>
+                            <td>Error</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">401</td>
+                            <td>Error of invalid access token</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">500</td>
+                            <td>Something went wrong error</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div  ng-if="show==20">
+            <div class="panel panel-default" >
+                <div class="panel-heading">/add_to_cart
+</div>
+                <div class="data" >
+
+
+                    <form action="/add_to_cart" method="post" >
+
+
+
+                        <div class="form-group">
+                            <label>Access Token *:</label>
+                            <input type="text"  class="form-control" ng-model="addToCart.accessToken" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Supplier Branch Id *:</label>
+                            <input type="text"  class="form-control" ng-model="addToCart.supplierBranchId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Remarks :</label>
+                            <input type="text"  class="form-control" ng-model="addToCart.remarks" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Product List *:</label>
+                            <input type="text"  class="form-control" ng-model="addToCart.productList" /><br/>
+                        </div>
+
+                        <button type="button" ng-click="addToCart()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==20">
+            <div class="panel-heading">Description
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+
+            </div>
+              <div id="demo" class="collapse data">
+   productList ex:
+    [
+      {productId:0,quantity:0},
+{productId:0,quantity:0},
+{productId:0,quantity:0}
+]
+
+  </div>
+
+            <div class="data" >
+                <h3>Summary</h3>
+                <p> This api is used for add list for product in cart
+
+                </p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th ><div>Param</div></th>
+                            <th ><div><span>Type</span></div></th>
+                            <th ><div><span>Description</span></div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td class="row-header">accessToken</td>
+                            <td>string</td>
+                            <td>Get access token user login time </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">supplierBranchId</td>
+                            <td>number</td>
+                            <td>
+Get from supplier list
+ </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">remarks</td>
+                            <td>string(optional)</td>
+                            <td>
+User enter
+  </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">productList</td>
+                            <td>Array</td>
+                            <td>
+List of all user anter product
+  </td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+
+
+
+                            <th class="rotate-45"><div>status</div></th>
+                            <th class="rotate-45"><div><span>Response</span></div></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="row-header">200</td>
+                            <td>Success</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">400</td>
+                            <td>Error</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">401</td>
+                            <td>Error of invalid access token</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">500</td>
+                            <td>Something went wrong error</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div  ng-if="show==21">
+            <div class="panel panel-default" >
+                <div class="panel-heading"> /update_cart_info
+</div>
+                <div class="data" >
+
+
+                    <form action="/update_cart_info" method="post" >
+
+
+
+                        <div class="form-group">
+                            <label>Access Token *:</label>
+                            <input type="text"  class="form-control" ng-model="updateCartInfo.accessToken" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Cart Id *:</label>
+                            <input type="text"  class="form-control" ng-model="updateCartInfo.cartId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Delivery Type *:</label>
+                            <input type="text"  class="form-control" ng-model="updateCartInfo.deliveryType" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Delivery Id *:</label>
+                            <input type="text"  class="form-control" ng-model="updateCartInfo.deliveryId" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Post Pone Date :</label>
+                            <input type="text"  class="form-control" ng-model="updateCartInfo.postPoneDate" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Pickup Time :</label>
+                            <input type="text"  class="form-control" ng-model="updateCartInfo.pickupTime" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Pickup ID :</label>
+                            <input type="text"  class="form-control" ng-model="updateCartInfo.pickupId" /><br/>
+                        </div>
+                        <button type="button" ng-click="updateCartInfo()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==21">
+            <div class="panel-heading">Description
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+  
+            </div>
+            <div id="demo" class="collapse data">
+   None
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used for update cart like address info,delivery type etc
+
+                </p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th ><div>Param</div></th>
+                            <th ><div><span>Type</span></div></th>
+                            <th ><div><span>Description</span></div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td class="row-header">accessToken</td>
+                            <td>string</td>
+                            <td>Get access token user login time </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">cartId</td>
+                            <td>number</td>
+                            <td>
+Get this add to cart add_to_cart api
+ </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">deliveryType</td>
+                            <td>number</td>
+                            <td>User Enter </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">deliveryId</td>
+                            <td>number</td>
+                            <td>Address id</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">postPoneDate</td>
+                            <td>Date (optional)</td>
+                            <td>User Enter </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">pickupTime</td>
+                            <td>Date (optional)</td>
+                            <td>User Enter </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">pickupId</td>
+                            <td>number(optional)</td>
+                            <td>User Enter </td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+
+
+
+                            <th class="rotate-45"><div>status</div></th>
+                            <th class="rotate-45"><div><span>Response</span></div></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="row-header">200</td>
+                            <td>Success</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">400</td>
+                            <td>Error</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">401</td>
+                            <td>Error of invalid access token</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">500</td>
+                            <td>Something went wrong error</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div  ng-if="show==22">
+            <div class="panel panel-default" >
+                <div class="panel-heading"> /image_resize
+</div>
+                <div class="data" >
+
+
+                    <form action="/image_resize" method="post" >
+
+
+
+                        <div class="form-group">
+                            <label>Path *:</label>
+                            <input type="text"  class="form-control" ng-model="imageResize.path" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Height *:</label>
+                            <input type="text"  class="form-control" ng-model="imageResize.height" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Width *:</label>
+                            <input type="text"  class="form-control" ng-model="imageResize.width" /><br/>
+                        </div>
+
+                        <button type="button" ng-click="imageResize()" class="button">Submit</button>
+                        <!--<input type="submit" value="submit" ng-click="loginSubmit()"  /><br/>-->
+
+
+                    </form>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" ng-if="show==22">
+            <div class="panel-heading">Description
+
+                 <button type="button" class="button1" data-toggle="collapse" data-target="#demo">Response</button>
+ 
+            </div>
+             <div id="demo" class="collapse data">
+   None
+  </div>
+            <div class="data" >
+                <h3>Summary</h3>
+                <p>This api is used for resize any size of image
+                </p>
+                <br>
+                <hr>
+                <h3>Parameters</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+                            <th ><div>Param</div></th>
+                            <th ><div><span>Type</span></div></th>
+                            <th ><div><span>Description</span></div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td class="row-header">path</td>
+                            <td>string</td>
+                            <td>Image path</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">height</td>
+                            <td>number</td>
+                            <td>User Enter </td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">width</td>
+                            <td>number</td>
+                            <td>User Enter </td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <hr>
+                <h3>Responses</h3>
+                <div class="scrollable-table">
+                    <table class="table ">
+                        <thead>
+                        <tr>
+
+
+
+                            <th class="rotate-45"><div>status</div></th>
+                            <th class="rotate-45"><div><span>Response</span></div></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="row-header">200</td>
+                            <td>Success</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">400</td>
+                            <td>Error</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">401</td>
+                            <td>Error of invalid access token</td>
+
+                        </tr>
+                        <tr>
+                            <td class="row-header">500</td>
+                            <td>Something went wrong error</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-4 col-lg-4 result">
+        <h3 class="left-margin">Response</h3>
+<pre class="response">{{showResponse |json}}</pre>
+    </div>
+</div>
+<!-- <script type="text/javascript">
+  	$('a').on('click', function(){
+   var target = $(this).attr('rel');
+   $("#"+target).show().siblings("div").hide();
+});
+  </script>
+-->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="controller.js"></script>
+<script src="services.js"></script>
+<!--<script src="directive.js"></script>-->
+</body>
+</html>
